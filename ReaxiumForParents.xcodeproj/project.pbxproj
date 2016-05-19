@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		95D7ACBF1CEE3949002BAFAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACBE1CEE3949002BAFAC /* AppDelegate.swift */; };
+		95D7ACC11CEE3949002BAFAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACC01CEE3949002BAFAC /* ViewController.swift */; };
+		95D7ACC41CEE3949002BAFAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7ACC21CEE3949002BAFAC /* Main.storyboard */; };
+		95D7ACC61CEE3949002BAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D7ACC51CEE3949002BAFAC /* Assets.xcassets */; };
+		95D7ACC91CEE3949002BAFAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7ACC71CEE3949002BAFAC /* LaunchScreen.storyboard */; };
+		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
+		95D7ACDF1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		95D7ACD01CEE3949002BAFAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D7ACB31CEE3948002BAFAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D7ACBA1CEE3948002BAFAC;
+			remoteInfo = ReaxiumForParents;
+		};
+		95D7ACDB1CEE3949002BAFAC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D7ACB31CEE3948002BAFAC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95D7ACBA1CEE3948002BAFAC;
+			remoteInfo = ReaxiumForParents;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaxiumForParents.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D7ACBE1CEE3949002BAFAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95D7ACC01CEE3949002BAFAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95D7ACC31CEE3949002BAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		95D7ACC51CEE3949002BAFAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D7ACC81CEE3949002BAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95D7ACCA1CEE3949002BAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D7ACCF1CEE3949002BAFAC /* ReaxiumForParentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaxiumForParentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaxiumForParentsTests.swift; sourceTree = "<group>"; };
+		95D7ACD51CEE3949002BAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D7ACDA1CEE3949002BAFAC /* ReaxiumForParentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaxiumForParentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaxiumForParentsUITests.swift; sourceTree = "<group>"; };
+		95D7ACE01CEE3949002BAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95D7ACB81CEE3948002BAFAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D7ACCC1CEE3949002BAFAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D7ACD71CEE3949002BAFAC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		95D7ACB21CEE3948002BAFAC = {
+			isa = PBXGroup;
+			children = (
+				95D7ACBD1CEE3949002BAFAC /* ReaxiumForParents */,
+				95D7ACD21CEE3949002BAFAC /* ReaxiumForParentsTests */,
+				95D7ACDD1CEE3949002BAFAC /* ReaxiumForParentsUITests */,
+				95D7ACBC1CEE3948002BAFAC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		95D7ACBC1CEE3948002BAFAC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */,
+				95D7ACCF1CEE3949002BAFAC /* ReaxiumForParentsTests.xctest */,
+				95D7ACDA1CEE3949002BAFAC /* ReaxiumForParentsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95D7ACBD1CEE3949002BAFAC /* ReaxiumForParents */ = {
+			isa = PBXGroup;
+			children = (
+				95D7ACBE1CEE3949002BAFAC /* AppDelegate.swift */,
+				95D7ACC01CEE3949002BAFAC /* ViewController.swift */,
+				95D7ACC21CEE3949002BAFAC /* Main.storyboard */,
+				95D7ACC51CEE3949002BAFAC /* Assets.xcassets */,
+				95D7ACC71CEE3949002BAFAC /* LaunchScreen.storyboard */,
+				95D7ACCA1CEE3949002BAFAC /* Info.plist */,
+			);
+			path = ReaxiumForParents;
+			sourceTree = "<group>";
+		};
+		95D7ACD21CEE3949002BAFAC /* ReaxiumForParentsTests */ = {
+			isa = PBXGroup;
+			children = (
+				95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */,
+				95D7ACD51CEE3949002BAFAC /* Info.plist */,
+			);
+			path = ReaxiumForParentsTests;
+			sourceTree = "<group>";
+		};
+		95D7ACDD1CEE3949002BAFAC /* ReaxiumForParentsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */,
+				95D7ACE01CEE3949002BAFAC /* Info.plist */,
+			);
+			path = ReaxiumForParentsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95D7ACBA1CEE3948002BAFAC /* ReaxiumForParents */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D7ACE31CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParents" */;
+			buildPhases = (
+				95D7ACB71CEE3948002BAFAC /* Sources */,
+				95D7ACB81CEE3948002BAFAC /* Frameworks */,
+				95D7ACB91CEE3948002BAFAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReaxiumForParents;
+			productName = ReaxiumForParents;
+			productReference = 95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */;
+			productType = "com.apple.product-type.application";
+		};
+		95D7ACCE1CEE3949002BAFAC /* ReaxiumForParentsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D7ACE61CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsTests" */;
+			buildPhases = (
+				95D7ACCB1CEE3949002BAFAC /* Sources */,
+				95D7ACCC1CEE3949002BAFAC /* Frameworks */,
+				95D7ACCD1CEE3949002BAFAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D7ACD11CEE3949002BAFAC /* PBXTargetDependency */,
+			);
+			name = ReaxiumForParentsTests;
+			productName = ReaxiumForParentsTests;
+			productReference = 95D7ACCF1CEE3949002BAFAC /* ReaxiumForParentsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		95D7ACD91CEE3949002BAFAC /* ReaxiumForParentsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95D7ACE91CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsUITests" */;
+			buildPhases = (
+				95D7ACD61CEE3949002BAFAC /* Sources */,
+				95D7ACD71CEE3949002BAFAC /* Frameworks */,
+				95D7ACD81CEE3949002BAFAC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				95D7ACDC1CEE3949002BAFAC /* PBXTargetDependency */,
+			);
+			name = ReaxiumForParentsUITests;
+			productName = ReaxiumForParentsUITests;
+			productReference = 95D7ACDA1CEE3949002BAFAC /* ReaxiumForParentsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95D7ACB31CEE3948002BAFAC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Jorge Rodriguez";
+				TargetAttributes = {
+					95D7ACBA1CEE3948002BAFAC = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					95D7ACCE1CEE3949002BAFAC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 95D7ACBA1CEE3948002BAFAC;
+					};
+					95D7ACD91CEE3949002BAFAC = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 95D7ACBA1CEE3948002BAFAC;
+					};
+				};
+			};
+			buildConfigurationList = 95D7ACB61CEE3948002BAFAC /* Build configuration list for PBXProject "ReaxiumForParents" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95D7ACB21CEE3948002BAFAC;
+			productRefGroup = 95D7ACBC1CEE3948002BAFAC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95D7ACBA1CEE3948002BAFAC /* ReaxiumForParents */,
+				95D7ACCE1CEE3949002BAFAC /* ReaxiumForParentsTests */,
+				95D7ACD91CEE3949002BAFAC /* ReaxiumForParentsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95D7ACB91CEE3948002BAFAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D7ACC91CEE3949002BAFAC /* LaunchScreen.storyboard in Resources */,
+				95D7ACC61CEE3949002BAFAC /* Assets.xcassets in Resources */,
+				95D7ACC41CEE3949002BAFAC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D7ACCD1CEE3949002BAFAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D7ACD81CEE3949002BAFAC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95D7ACB71CEE3948002BAFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D7ACC11CEE3949002BAFAC /* ViewController.swift in Sources */,
+				95D7ACBF1CEE3949002BAFAC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D7ACCB1CEE3949002BAFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95D7ACD61CEE3949002BAFAC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95D7ACDF1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		95D7ACD11CEE3949002BAFAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D7ACBA1CEE3948002BAFAC /* ReaxiumForParents */;
+			targetProxy = 95D7ACD01CEE3949002BAFAC /* PBXContainerItemProxy */;
+		};
+		95D7ACDC1CEE3949002BAFAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95D7ACBA1CEE3948002BAFAC /* ReaxiumForParents */;
+			targetProxy = 95D7ACDB1CEE3949002BAFAC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		95D7ACC21CEE3949002BAFAC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D7ACC31CEE3949002BAFAC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		95D7ACC71CEE3949002BAFAC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D7ACC81CEE3949002BAFAC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95D7ACE11CEE3949002BAFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95D7ACE21CEE3949002BAFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95D7ACE41CEE3949002BAFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReaxiumForParents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		95D7ACE51CEE3949002BAFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ReaxiumForParents/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		95D7ACE71CEE3949002BAFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReaxiumForParentsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaxiumForParents.app/ReaxiumForParents";
+			};
+			name = Debug;
+		};
+		95D7ACE81CEE3949002BAFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ReaxiumForParentsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaxiumForParents.app/ReaxiumForParents";
+			};
+			name = Release;
+		};
+		95D7ACEA1CEE3949002BAFAC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ReaxiumForParentsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ReaxiumForParents;
+			};
+			name = Debug;
+		};
+		95D7ACEB1CEE3949002BAFAC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ReaxiumForParentsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ReaxiumForParents;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95D7ACB61CEE3948002BAFAC /* Build configuration list for PBXProject "ReaxiumForParents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D7ACE11CEE3949002BAFAC /* Debug */,
+				95D7ACE21CEE3949002BAFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95D7ACE31CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParents" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D7ACE41CEE3949002BAFAC /* Debug */,
+				95D7ACE51CEE3949002BAFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		95D7ACE61CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D7ACE71CEE3949002BAFAC /* Debug */,
+				95D7ACE81CEE3949002BAFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		95D7ACE91CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95D7ACEA1CEE3949002BAFAC /* Debug */,
+				95D7ACEB1CEE3949002BAFAC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 95D7ACB31CEE3948002BAFAC /* Project object */;
+}
