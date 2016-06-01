@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0AB7F1DBE53FE6A6C56AC765 /* Pods_ReaxiumForParents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */; };
+		6AB68B3A548E754879241DCA /* Pods_ReaxiumForParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */; };
 		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
 		95D7ACDF1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */; };
 		95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD131CEE4086002BAFAC /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 		95D7AD231CEE413C002BAFAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD221CEE413C002BAFAC /* Info.plist */; };
 		95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7AD251CEE4218002BAFAC /* ViewController.swift */; };
 		95D7AD291CEE4565002BAFAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7AD281CEE4565002BAFAC /* AppDelegate.swift */; };
+		BF14BC6D56BA5B70A2D6C2EB /* Pods_ReaxiumForParentsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE882EE8C3F88DB9541AC9D9 /* Pods_ReaxiumForParentsTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaxiumForParents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7ACCF1CEE3949002BAFAC /* ReaxiumForParentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaxiumForParentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaxiumForParentsTests.swift; sourceTree = "<group>"; };
@@ -52,7 +56,11 @@
 		95D7AD271CEE423E002BAFAC /* ReaxiumForParents-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReaxiumForParents-Bridging-Header.h"; sourceTree = "<group>"; };
 		95D7AD281CEE4565002BAFAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C90ADB2C825F10CAA348013 /* Pods-ReaxiumForParents.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParents.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParents/Pods-ReaxiumForParents.release.xcconfig"; sourceTree = "<group>"; };
+		A9110C78EBC3E0599CD89364 /* Pods-ReaxiumForParentsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests.release.xcconfig"; sourceTree = "<group>"; };
+		CE882EE8C3F88DB9541AC9D9 /* Pods_ReaxiumForParentsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParentsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D13A55034F116193C6D20372 /* Pods-ReaxiumForParents.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParents.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParents/Pods-ReaxiumForParents.debug.xcconfig"; sourceTree = "<group>"; };
+		F77CE1A054093AABCA10A655 /* Pods-ReaxiumForParentsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParentsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF14BC6D56BA5B70A2D6C2EB /* Pods_ReaxiumForParentsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB68B3A548E754879241DCA /* Pods_ReaxiumForParentsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */,
+				CE882EE8C3F88DB9541AC9D9 /* Pods_ReaxiumForParentsTests.framework */,
+				FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -252,6 +264,10 @@
 			children = (
 				D13A55034F116193C6D20372 /* Pods-ReaxiumForParents.debug.xcconfig */,
 				9C90ADB2C825F10CAA348013 /* Pods-ReaxiumForParents.release.xcconfig */,
+				17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */,
+				A9110C78EBC3E0599CD89364 /* Pods-ReaxiumForParentsTests.release.xcconfig */,
+				F77CE1A054093AABCA10A655 /* Pods-ReaxiumForParentsUITests.debug.xcconfig */,
+				4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -263,12 +279,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7ACE31CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParents" */;
 			buildPhases = (
-				177713C7626A487F1427C4A1 /* Check Pods Manifest.lock */,
+				177713C7626A487F1427C4A1 /* 📦 Check Pods Manifest.lock */,
 				95D7ACB71CEE3948002BAFAC /* Sources */,
 				95D7ACB81CEE3948002BAFAC /* Frameworks */,
 				95D7ACB91CEE3948002BAFAC /* Resources */,
-				DD87F0CC2F6D0DC8FD7B960F /* Embed Pods Frameworks */,
-				182C4927F4FC0AA1F25DF71D /* Copy Pods Resources */,
+				DD87F0CC2F6D0DC8FD7B960F /* 📦 Embed Pods Frameworks */,
+				182C4927F4FC0AA1F25DF71D /* 📦 Copy Pods Resources */,
 				950546181CFE7D59000691D5 /* ShellScript */,
 			);
 			buildRules = (
@@ -284,9 +300,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7ACE61CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsTests" */;
 			buildPhases = (
+				081D16B33E93A3D83E9DE6D2 /* 📦 Check Pods Manifest.lock */,
 				95D7ACCB1CEE3949002BAFAC /* Sources */,
 				95D7ACCC1CEE3949002BAFAC /* Frameworks */,
 				95D7ACCD1CEE3949002BAFAC /* Resources */,
+				9C32D2E6C2B7E1CA2D8B930B /* 📦 Embed Pods Frameworks */,
+				94A3AC7636A397DC718E2E8C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -302,9 +321,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7ACE91CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsUITests" */;
 			buildPhases = (
+				FE8155C96D9253A2E177ADF3 /* 📦 Check Pods Manifest.lock */,
 				95D7ACD61CEE3949002BAFAC /* Sources */,
 				95D7ACD71CEE3949002BAFAC /* Frameworks */,
 				95D7ACD81CEE3949002BAFAC /* Resources */,
+				34DB9B71809A862F51D7BBD9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -388,14 +409,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		177713C7626A487F1427C4A1 /* Check Pods Manifest.lock */ = {
+		081D16B33E93A3D83E9DE6D2 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,19 +424,64 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		182C4927F4FC0AA1F25DF71D /* Copy Pods Resources */ = {
+		177713C7626A487F1427C4A1 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		182C4927F4FC0AA1F25DF71D /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParents/Pods-ReaxiumForParents-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34DB9B71809A862F51D7BBD9 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		94A3AC7636A397DC718E2E8C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		950546181CFE7D59000691D5 /* ShellScript */ = {
@@ -431,19 +497,49 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Fabric/run\" 19743b86c2d6bfbb2c287794c665f460d57c0ee4 c06d4da3eeadccff53d5646ac4a1590dc96492532518e7b25bfecc6ae2c5053e";
 		};
-		DD87F0CC2F6D0DC8FD7B960F /* Embed Pods Frameworks */ = {
+		9C32D2E6C2B7E1CA2D8B930B /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD87F0CC2F6D0DC8FD7B960F /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParents/Pods-ReaxiumForParents-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8155C96D9253A2E177ADF3 /* 📦 Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -625,6 +721,7 @@
 		};
 		95D7ACE71CEE3949002BAFAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ReaxiumForParentsTests/Info.plist;
@@ -637,6 +734,7 @@
 		};
 		95D7ACE81CEE3949002BAFAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9110C78EBC3E0599CD89364 /* Pods-ReaxiumForParentsTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = ReaxiumForParentsTests/Info.plist;
@@ -649,6 +747,7 @@
 		};
 		95D7ACEA1CEE3949002BAFAC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77CE1A054093AABCA10A655 /* Pods-ReaxiumForParentsUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ReaxiumForParentsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -660,6 +759,7 @@
 		};
 		95D7ACEB1CEE3949002BAFAC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = ReaxiumForParentsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
