@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZLo-er-dek">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -130,6 +130,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="loginAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ce7-Hj-uWB"/>
+                                    <segue destination="9FX-sr-5Jg" kind="show" identifier="DRAWER_SEGUE" id="A2Y-n6-0MD"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="logo_reaxium_signal" translatesAutoresizingMaskIntoConstraints="NO" id="47s-RO-a2s">
@@ -154,12 +155,39 @@
                             <constraint firstItem="ffd-f1-4nO" firstAttribute="height" secondItem="7Jf-UG-dQk" secondAttribute="height" id="yVp-wa-iHW"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="0Zd-Ci-2tb"/>
                     <connections>
                         <outlet property="passwordTextField" destination="cZc-en-Hn2" id="dPQ-mm-z3V"/>
                         <outlet property="usernameTextField" destination="Hqy-rw-idb" id="EpD-Ay-qhg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="493"/>
+        </scene>
+        <!--DrawerController-->
+        <scene sceneID="CGo-lY-6wl">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="DrawerController" id="9FX-sr-5Jg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAV-Ie-Sdu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.5" y="493"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZZf-rG-Fwm">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZLo-er-dek" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Stx-kd-8D7">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="JDr-3s-Z8c"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6y-FG-n0K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="424" y="493"/>
         </scene>
