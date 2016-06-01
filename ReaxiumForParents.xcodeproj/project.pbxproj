@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		95D7ACBF1CEE3949002BAFAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACBE1CEE3949002BAFAC /* AppDelegate.swift */; };
-		95D7ACC11CEE3949002BAFAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACC01CEE3949002BAFAC /* ViewController.swift */; };
-		95D7ACC41CEE3949002BAFAC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7ACC21CEE3949002BAFAC /* Main.storyboard */; };
-		95D7ACC61CEE3949002BAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D7ACC51CEE3949002BAFAC /* Assets.xcassets */; };
-		95D7ACC91CEE3949002BAFAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7ACC71CEE3949002BAFAC /* LaunchScreen.storyboard */; };
 		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
 		95D7ACDF1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */; };
+		95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD131CEE4086002BAFAC /* Assets.xcassets */; };
+		95D7AD201CEE40D9002BAFAC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD1C1CEE40D9002BAFAC /* LaunchScreen.storyboard */; };
+		95D7AD211CEE40D9002BAFAC /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD1E1CEE40D9002BAFAC /* Login.storyboard */; };
+		95D7AD231CEE413C002BAFAC /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD221CEE413C002BAFAC /* Info.plist */; };
+		95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7AD251CEE4218002BAFAC /* ViewController.swift */; };
+		95D7AD291CEE4565002BAFAC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7AD281CEE4565002BAFAC /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,18 +36,19 @@
 
 /* Begin PBXFileReference section */
 		95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaxiumForParents.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		95D7ACBE1CEE3949002BAFAC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		95D7ACC01CEE3949002BAFAC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		95D7ACC31CEE3949002BAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		95D7ACC51CEE3949002BAFAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		95D7ACC81CEE3949002BAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		95D7ACCA1CEE3949002BAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D7ACCF1CEE3949002BAFAC /* ReaxiumForParentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaxiumForParentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaxiumForParentsTests.swift; sourceTree = "<group>"; };
 		95D7ACD51CEE3949002BAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		95D7ACDA1CEE3949002BAFAC /* ReaxiumForParentsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaxiumForParentsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaxiumForParentsUITests.swift; sourceTree = "<group>"; };
 		95D7ACE01CEE3949002BAFAC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D7AD131CEE4086002BAFAC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95D7AD1D1CEE40D9002BAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95D7AD1F1CEE40D9002BAFAC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
+		95D7AD221CEE413C002BAFAC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95D7AD251CEE4218002BAFAC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		95D7AD271CEE423E002BAFAC /* ReaxiumForParents-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ReaxiumForParents-Bridging-Header.h"; sourceTree = "<group>"; };
+		95D7AD281CEE4565002BAFAC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +99,13 @@
 		95D7ACBD1CEE3949002BAFAC /* ReaxiumForParents */ = {
 			isa = PBXGroup;
 			children = (
-				95D7ACBE1CEE3949002BAFAC /* AppDelegate.swift */,
-				95D7ACC01CEE3949002BAFAC /* ViewController.swift */,
-				95D7ACC21CEE3949002BAFAC /* Main.storyboard */,
-				95D7ACC51CEE3949002BAFAC /* Assets.xcassets */,
-				95D7ACC71CEE3949002BAFAC /* LaunchScreen.storyboard */,
-				95D7ACCA1CEE3949002BAFAC /* Info.plist */,
+				95D7AD061CEE3E5E002BAFAC /* Application */,
+				95D7AD0C1CEE3E6F002BAFAC /* Models */,
+				95D7AD0B1CEE3E6F002BAFAC /* Views */,
+				95D7AD0A1CEE3E6F002BAFAC /* Controllers */,
+				95D7AD091CEE3E6F002BAFAC /* Services */,
+				95D7AD081CEE3E6F002BAFAC /* Resources */,
+				95D7AD071CEE3E6F002BAFAC /* Supporting Files */,
 			);
 			path = ReaxiumForParents;
 			sourceTree = "<group>";
@@ -123,6 +126,110 @@
 				95D7ACE01CEE3949002BAFAC /* Info.plist */,
 			);
 			path = ReaxiumForParentsUITests;
+			sourceTree = "<group>";
+		};
+		95D7AD061CEE3E5E002BAFAC /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD281CEE4565002BAFAC /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		95D7AD071CEE3E6F002BAFAC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD271CEE423E002BAFAC /* ReaxiumForParents-Bridging-Header.h */,
+				95D7AD221CEE413C002BAFAC /* Info.plist */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		95D7AD081CEE3E6F002BAFAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD0D1CEE3F97002BAFAC /* UI */,
+				95D7AD0E1CEE3F97002BAFAC /* Media */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		95D7AD091CEE3E6F002BAFAC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		95D7AD0A1CEE3E6F002BAFAC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD251CEE4218002BAFAC /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		95D7AD0B1CEE3E6F002BAFAC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		95D7AD0C1CEE3E6F002BAFAC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		95D7AD0D1CEE3F97002BAFAC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD1C1CEE40D9002BAFAC /* LaunchScreen.storyboard */,
+				95D7AD1E1CEE40D9002BAFAC /* Login.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		95D7AD0E1CEE3F97002BAFAC /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD0F1CEE4004002BAFAC /* Images */,
+				95D7AD101CEE4004002BAFAC /* Videos */,
+				95D7AD111CEE4004002BAFAC /* Audios */,
+				95D7AD121CEE4004002BAFAC /* Fonts */,
+			);
+			path = Media;
+			sourceTree = "<group>";
+		};
+		95D7AD0F1CEE4004002BAFAC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				95D7AD131CEE4086002BAFAC /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		95D7AD101CEE4004002BAFAC /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
+		95D7AD111CEE4004002BAFAC /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Audios;
+			sourceTree = "<group>";
+		};
+		95D7AD121CEE4004002BAFAC /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +336,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D7ACC91CEE3949002BAFAC /* LaunchScreen.storyboard in Resources */,
-				95D7ACC61CEE3949002BAFAC /* Assets.xcassets in Resources */,
-				95D7ACC41CEE3949002BAFAC /* Main.storyboard in Resources */,
+				95D7AD231CEE413C002BAFAC /* Info.plist in Resources */,
+				95D7AD211CEE40D9002BAFAC /* Login.storyboard in Resources */,
+				95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */,
+				95D7AD201CEE40D9002BAFAC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				95D7ACC11CEE3949002BAFAC /* ViewController.swift in Sources */,
-				95D7ACBF1CEE3949002BAFAC /* AppDelegate.swift in Sources */,
+				95D7AD291CEE4565002BAFAC /* AppDelegate.swift in Sources */,
+				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,20 +401,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		95D7ACC21CEE3949002BAFAC /* Main.storyboard */ = {
+		95D7AD1C1CEE40D9002BAFAC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				95D7ACC31CEE3949002BAFAC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		95D7ACC71CEE3949002BAFAC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				95D7ACC81CEE3949002BAFAC /* Base */,
+				95D7AD1D1CEE40D9002BAFAC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		95D7AD1E1CEE40D9002BAFAC /* Login.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95D7AD1F1CEE40D9002BAFAC /* Base */,
+			);
+			name = Login.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -401,10 +509,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ReaxiumForParents/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ReaxiumForParents/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ReaxiumForParents/Supporting Files/ReaxiumForParents-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -412,10 +523,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ReaxiumForParents/Info.plist;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/ReaxiumForParents/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ReaxiumForParents/Supporting Files/ReaxiumForParents-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -484,6 +597,7 @@
 				95D7ACE51CEE3949002BAFAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95D7ACE61CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +606,7 @@
 				95D7ACE81CEE3949002BAFAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		95D7ACE91CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +615,7 @@
 				95D7ACEB1CEE3949002BAFAC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

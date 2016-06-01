@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReaxiumForParents" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O69-7C-p3o">
+                                <rect key="frame" x="261" y="68" width="78" height="126"/>
+                                <string key="text">App
+Logo
+Here</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bGO-SU-Ldq">
+                                <rect key="frame" x="40" y="248" width="520" height="104"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDL-Cc-eWZ">
+                                        <rect key="frame" x="8" y="8" width="504" height="40"/>
+                                        <subviews>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hqy-rw-idb">
+                                                <rect key="frame" x="40" y="0.0" width="464" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
+                                            </textField>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ubc-CL-Iv4">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="EC5-k0-GHR"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="ubc-CL-Iv4" firstAttribute="top" secondItem="SDL-Cc-eWZ" secondAttribute="top" id="1fu-pU-ep1"/>
+                                            <constraint firstAttribute="bottom" secondItem="ubc-CL-Iv4" secondAttribute="bottom" id="8I3-eT-WBg"/>
+                                            <constraint firstItem="Hqy-rw-idb" firstAttribute="leading" secondItem="ubc-CL-Iv4" secondAttribute="trailing" id="NrF-zX-1fA"/>
+                                            <constraint firstAttribute="height" constant="40" id="ZBb-94-Zvg"/>
+                                            <constraint firstItem="ubc-CL-Iv4" firstAttribute="leading" secondItem="SDL-Cc-eWZ" secondAttribute="leading" id="f8G-D7-uSG"/>
+                                            <constraint firstItem="Hqy-rw-idb" firstAttribute="top" secondItem="SDL-Cc-eWZ" secondAttribute="top" id="g0P-Hv-Ni1"/>
+                                            <constraint firstItem="Hqy-rw-idb" firstAttribute="centerY" secondItem="SDL-Cc-eWZ" secondAttribute="centerY" id="kLZ-2f-9ak"/>
+                                            <constraint firstAttribute="bottom" secondItem="Hqy-rw-idb" secondAttribute="bottom" id="oFu-DV-Wvu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Hqy-rw-idb" secondAttribute="trailing" id="txN-fZ-yrI"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Jf-UG-dQk">
+                                        <rect key="frame" x="8" y="56" width="504" height="40"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LeM-PK-Nh5">
+                                                <rect key="frame" x="0.0" y="0.0" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="1wv-pq-bIc"/>
+                                                </constraints>
+                                            </imageView>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cZc-en-Hn2">
+                                                <rect key="frame" x="40" y="0.0" width="464" height="40"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                                            </textField>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="cZc-en-Hn2" secondAttribute="bottom" id="Asd-TN-NEK"/>
+                                            <constraint firstItem="cZc-en-Hn2" firstAttribute="centerY" secondItem="7Jf-UG-dQk" secondAttribute="centerY" id="L2G-JY-CyX"/>
+                                            <constraint firstItem="LeM-PK-Nh5" firstAttribute="top" secondItem="7Jf-UG-dQk" secondAttribute="top" id="X0a-AM-pbi"/>
+                                            <constraint firstItem="cZc-en-Hn2" firstAttribute="top" secondItem="7Jf-UG-dQk" secondAttribute="top" id="hLF-Bk-07n"/>
+                                            <constraint firstAttribute="trailing" secondItem="cZc-en-Hn2" secondAttribute="trailing" id="iao-dD-HWb"/>
+                                            <constraint firstAttribute="bottom" secondItem="LeM-PK-Nh5" secondAttribute="bottom" id="pgi-nJ-NqJ"/>
+                                            <constraint firstItem="cZc-en-Hn2" firstAttribute="leading" secondItem="LeM-PK-Nh5" secondAttribute="trailing" id="qgQ-Lh-PFX"/>
+                                            <constraint firstItem="LeM-PK-Nh5" firstAttribute="leading" secondItem="7Jf-UG-dQk" secondAttribute="leading" id="uit-b8-mfu"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="SDL-Cc-eWZ" firstAttribute="top" secondItem="bGO-SU-Ldq" secondAttribute="top" constant="8" id="03P-9g-fjN"/>
+                                    <constraint firstAttribute="trailing" secondItem="SDL-Cc-eWZ" secondAttribute="trailing" constant="8" id="6zw-2k-pNe"/>
+                                    <constraint firstAttribute="height" constant="104" id="Ke2-vw-Vr5"/>
+                                    <constraint firstItem="7Jf-UG-dQk" firstAttribute="height" secondItem="SDL-Cc-eWZ" secondAttribute="height" id="Mqv-Pk-dwg"/>
+                                    <constraint firstItem="7Jf-UG-dQk" firstAttribute="width" secondItem="SDL-Cc-eWZ" secondAttribute="width" id="Vu0-HL-vOz"/>
+                                    <constraint firstItem="7Jf-UG-dQk" firstAttribute="top" secondItem="SDL-Cc-eWZ" secondAttribute="bottom" constant="8" id="XJ3-B6-Wt0"/>
+                                    <constraint firstItem="7Jf-UG-dQk" firstAttribute="centerX" secondItem="SDL-Cc-eWZ" secondAttribute="centerX" id="dgS-cm-Szd"/>
+                                    <constraint firstItem="SDL-Cc-eWZ" firstAttribute="leading" secondItem="bGO-SU-Ldq" secondAttribute="leading" constant="8" id="ehW-wS-KfE"/>
+                                    <constraint firstItem="SDL-Cc-eWZ" firstAttribute="centerX" secondItem="bGO-SU-Ldq" secondAttribute="centerX" id="kFO-Of-58o"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffd-f1-4nO">
+                                <rect key="frame" x="48" y="520" width="504" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O69-7C-p3o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5Jb-FE-6md"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bGO-SU-Ldq" secondAttribute="trailing" constant="20" id="FFF-AD-icJ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ffd-f1-4nO" secondAttribute="bottom" constant="40" id="HU6-SY-v5w"/>
+                            <constraint firstItem="bGO-SU-Ldq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="NCm-TJ-H8U"/>
+                            <constraint firstItem="ffd-f1-4nO" firstAttribute="width" secondItem="7Jf-UG-dQk" secondAttribute="width" id="Oao-gA-B5F"/>
+                            <constraint firstItem="bGO-SU-Ldq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="Z7N-YZ-BPp"/>
+                            <constraint firstItem="O69-7C-p3o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="48" id="hDX-tF-ldE"/>
+                            <constraint firstItem="bGO-SU-Ldq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lSl-V1-PZF"/>
+                            <constraint firstItem="ffd-f1-4nO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tOn-4i-ZmY"/>
+                            <constraint firstItem="ffd-f1-4nO" firstAttribute="height" secondItem="7Jf-UG-dQk" secondAttribute="height" id="yVp-wa-iHW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="424" y="493"/>
+        </scene>
+    </scenes>
+</document>
