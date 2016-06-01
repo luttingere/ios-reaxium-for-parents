@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06CE19A61CFF137500B7882A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE19A51CFF137500B7882A /* LoginViewController.swift */; };
 		0AB7F1DBE53FE6A6C56AC765 /* Pods_ReaxiumForParents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */; };
 		6AB68B3A548E754879241DCA /* Pods_ReaxiumForParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */; };
 		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06CE19A51CFF137500B7882A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				95D7AD251CEE4218002BAFAC /* ViewController.swift */,
+				06CE19A51CFF137500B7882A /* LoginViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -549,6 +552,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06CE19A61CFF137500B7882A /* LoginViewController.swift in Sources */,
 				95D7AD291CEE4565002BAFAC /* AppDelegate.swift in Sources */,
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 			);
