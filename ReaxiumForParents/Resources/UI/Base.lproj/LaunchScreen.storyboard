@@ -17,23 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reaxium For Parents" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcd-x5-di2">
-                                <rect key="frame" x="187" y="285" width="227" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="© 2016" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bmB-Jo-YCJ">
-                                <rect key="frame" x="272" y="323" width="57" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo_reaxium" translatesAutoresizingMaskIntoConstraints="NO" id="Bcg-0j-zpg">
+                                <rect key="frame" x="220" y="260" width="161" height="80"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="bmB-Jo-YCJ" firstAttribute="top" secondItem="fcd-x5-di2" secondAttribute="bottom" constant="8" id="QB1-Ed-Hp8"/>
-                            <constraint firstItem="fcd-x5-di2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="XYJ-A9-bv6"/>
-                            <constraint firstItem="bmB-Jo-YCJ" firstAttribute="centerX" secondItem="fcd-x5-di2" secondAttribute="centerX" id="etc-ap-yQl"/>
-                            <constraint firstItem="fcd-x5-di2" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="sFc-G9-l2p"/>
+                            <constraint firstItem="Bcg-0j-zpg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="DjB-5K-n3T"/>
+                            <constraint firstItem="Bcg-0j-zpg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="jge-cE-jcs"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -42,4 +33,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo_reaxium" width="161" height="80"/>
+    </resources>
 </document>
