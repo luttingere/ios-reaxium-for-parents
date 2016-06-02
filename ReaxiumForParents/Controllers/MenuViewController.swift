@@ -67,18 +67,18 @@ extension MenuViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        /*
-        if indexPath.row == 0 {
-            
-            let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ViewController") as! ViewController
-            let centerNav = UINavigationController(rootViewController: centerViewController)
-
-            let delegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            delegate.centerContainer?.centerViewController = centerNav
-            delegate.centerContainer!.toggleDrawerSide(MMDrawerSide.Right, animated: true, completion: nil)
-        }else{
         
-        }*/
+        if indexPath.row == 0 {
+            if let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController"){
+                let centerNav = UINavigationController(rootViewController: centerViewController)
+                self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+            }
+        }else{
+            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
+                let centerNav = UINavigationController(rootViewController: centerViewController)
+                self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+        }
     }
 
 }

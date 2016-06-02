@@ -52,11 +52,13 @@ class LoginViewController: UIViewController {
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 // Instantitate and set the center view controller.
                 let centerViewController:UIViewController = (mainStoryboard.instantiateViewControllerWithIdentifier("HomeViewController"))
-                destinationViewController.centerViewController = centerViewController
+                let centerNav = UINavigationController(rootViewController: centerViewController)
+                destinationViewController.centerViewController = centerNav
                 
                 // Instantiate and set the right drawer controller.
                 let rightViewController:UIViewController = (mainStoryboard.instantiateViewControllerWithIdentifier("MenuViewController"))
-                destinationViewController.rightDrawerViewController = rightViewController
+                let rightNav = UINavigationController(rootViewController: rightViewController)
+                destinationViewController.rightDrawerViewController = rightNav
                 
                 destinationViewController.openDrawerGestureModeMask = MMOpenDrawerGestureMode.PanningCenterView;
                 destinationViewController.closeDrawerGestureModeMask = MMCloseDrawerGestureMode.PanningCenterView;
