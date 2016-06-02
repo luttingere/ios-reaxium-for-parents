@@ -52,7 +52,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -71,9 +71,11 @@ extension HomeViewController: StudentTableViewCellDelegate{
     
     func accessInfoPressed() {
         print("accessInfoPressed")
+        self.performSegueWithIdentifier("ACCESS_INFORMATION", sender: self)
     }
     
     func trackStudentPressed() {
         print("trackStudentPressed")
+        self.performSegueWithIdentifier("TRACK_STUDENT", sender: self)
     }
 }
