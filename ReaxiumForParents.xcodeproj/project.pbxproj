@@ -21,6 +21,7 @@
 		952252241D035026008A2E1B /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252231D035026008A2E1B /* LoginWebService.swift */; };
 		952252261D035D6E008A2E1B /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252251D035D6E008A2E1B /* Children.swift */; };
 		952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252271D037C2F008A2E1B /* ReaxiumHelper.swift */; };
+		9522522A1D038AA4008A2E1B /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */; };
 		9535C58F1D031F5600FF4390 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535C58E1D031F5600FF4390 /* Constants.swift */; };
 		95C0738F1D0347DB00B4002C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0738E1D0347DB00B4002C /* User.swift */; };
 		95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C073901D0349ED00B4002C /* ReaxiumResponse.swift */; };
@@ -68,6 +69,7 @@
 		952252231D035026008A2E1B /* LoginWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
 		952252251D035D6E008A2E1B /* Children.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
 		952252271D037C2F008A2E1B /* ReaxiumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumHelper.swift; sourceTree = "<group>"; };
+		952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		9535C58E1D031F5600FF4390 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		95C0738E1D0347DB00B4002C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95C073901D0349ED00B4002C /* ReaxiumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumResponse.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 			children = (
 				06CE1A391CFF2B0F00B7882A /* StudentTableViewCell.swift */,
 				06CE1A3A1CFF2B0F00B7882A /* MenuTableViewCell.swift */,
+				952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -602,6 +605,7 @@
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 				06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */,
 				952252241D035026008A2E1B /* LoginWebService.swift in Sources */,
+				9522522A1D038AA4008A2E1B /* NotificationTableViewCell.swift in Sources */,
 				9535C58F1D031F5600FF4390 /* Constants.swift in Sources */,
 				06D19A6B1D00DC0300A07504 /* TrackStudentViewController.swift in Sources */,
 				952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */,

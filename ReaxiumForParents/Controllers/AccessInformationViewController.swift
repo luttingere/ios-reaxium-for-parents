@@ -10,6 +10,8 @@ import UIKit
 
 class AccessInformationViewController: UIViewController {
 
+    @IBOutlet weak var notificationsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,3 +35,22 @@ class AccessInformationViewController: UIViewController {
     */
 
 }
+
+extension AccessInformationViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NotificationTableViewCell
+        cell.showMessageViewForNotification(indexPath.row)
+        return cell
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+}
+

@@ -444,15 +444,108 @@
                                     <constraint firstAttribute="height" constant="124" id="yJq-wL-ARF"/>
                                 </constraints>
                             </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="48s-2J-JGD">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Zsk-2C-RZD" customClass="NotificationTableViewCell" customModule="ReaxiumForParents" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zsk-2C-RZD" id="YK2-uR-dTC">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-zy-MPx" userLabel="Incoming">
+                                                    <rect key="frame" x="8" y="12" width="180" height="67"/>
+                                                    <subviews>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="in_access_message" translatesAutoresizingMaskIntoConstraints="NO" id="icl-Ff-ELJ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="67"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name, aboard the bus, at 08:30:00 AM" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0z-OE-VwH">
+                                                            <rect key="frame" x="8" y="8" width="164" height="32"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="icl-Ff-ELJ" firstAttribute="leading" secondItem="cW2-zy-MPx" secondAttribute="leading" id="1BL-Xq-FLK"/>
+                                                        <constraint firstItem="icl-Ff-ELJ" firstAttribute="top" secondItem="cW2-zy-MPx" secondAttribute="top" id="8Me-sQ-zm1"/>
+                                                        <constraint firstAttribute="width" constant="180" id="8bo-Dr-Ggd"/>
+                                                        <constraint firstItem="l0z-OE-VwH" firstAttribute="leading" secondItem="cW2-zy-MPx" secondAttribute="leading" constant="8" id="G7q-49-RX8"/>
+                                                        <constraint firstAttribute="trailing" secondItem="icl-Ff-ELJ" secondAttribute="trailing" id="RYs-v5-UUL"/>
+                                                        <constraint firstAttribute="trailing" secondItem="l0z-OE-VwH" secondAttribute="trailing" constant="8" id="TmD-dB-iPM"/>
+                                                        <constraint firstItem="l0z-OE-VwH" firstAttribute="top" secondItem="cW2-zy-MPx" secondAttribute="top" constant="8" id="by6-Bb-mhI"/>
+                                                        <constraint firstAttribute="height" constant="67" id="pnD-FZ-3Mb"/>
+                                                        <constraint firstAttribute="bottom" secondItem="icl-Ff-ELJ" secondAttribute="bottom" id="z70-qF-gFU"/>
+                                                    </constraints>
+                                                </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdi-Fq-zP1" userLabel="Outcoming">
+                                                    <rect key="frame" x="132" y="12" width="180" height="67"/>
+                                                    <subviews>
+                                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="out_access_message" translatesAutoresizingMaskIntoConstraints="NO" id="NHh-ze-rNb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="67"/>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name, off the bus, at 09:30:00 AM" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-sx-IdE">
+                                                            <rect key="frame" x="8" y="8" width="164" height="32"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstItem="FLH-sx-IdE" firstAttribute="leading" secondItem="gdi-Fq-zP1" secondAttribute="leading" constant="8" id="EMg-lw-sac"/>
+                                                        <constraint firstAttribute="bottom" secondItem="NHh-ze-rNb" secondAttribute="bottom" id="TNF-gG-03Z"/>
+                                                        <constraint firstAttribute="height" constant="67" id="TPW-gY-dpQ"/>
+                                                        <constraint firstItem="NHh-ze-rNb" firstAttribute="top" secondItem="gdi-Fq-zP1" secondAttribute="top" id="Te4-8j-TDW"/>
+                                                        <constraint firstItem="NHh-ze-rNb" firstAttribute="leading" secondItem="gdi-Fq-zP1" secondAttribute="leading" id="UnG-0g-jcj"/>
+                                                        <constraint firstAttribute="width" constant="180" id="WFR-aH-h6x"/>
+                                                        <constraint firstItem="FLH-sx-IdE" firstAttribute="top" secondItem="gdi-Fq-zP1" secondAttribute="top" constant="8" id="hcW-VT-ixD"/>
+                                                        <constraint firstAttribute="trailing" secondItem="NHh-ze-rNb" secondAttribute="trailing" id="s68-Y1-mAp"/>
+                                                        <constraint firstAttribute="trailing" secondItem="FLH-sx-IdE" secondAttribute="trailing" constant="8" id="wQA-vK-0vi"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="cW2-zy-MPx" firstAttribute="leading" secondItem="YK2-uR-dTC" secondAttribute="leading" constant="8" id="oIw-23-zCJ"/>
+                                                <constraint firstItem="cW2-zy-MPx" firstAttribute="top" secondItem="YK2-uR-dTC" secondAttribute="top" constant="12" id="pei-Do-mOP"/>
+                                                <constraint firstAttribute="trailing" secondItem="gdi-Fq-zP1" secondAttribute="trailing" constant="8" id="sSD-YI-z6f"/>
+                                                <constraint firstItem="gdi-Fq-zP1" firstAttribute="top" secondItem="YK2-uR-dTC" secondAttribute="top" constant="12" id="vqY-vl-X7D"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="incomingMessageLabel" destination="l0z-OE-VwH" id="1jE-JX-Nlg"/>
+                                            <outlet property="incomingMessageView" destination="cW2-zy-MPx" id="vvY-h7-hC9"/>
+                                            <outlet property="outcomingMessageLabel" destination="FLH-sx-IdE" id="cs2-Da-vyq"/>
+                                            <outlet property="outcomingMessageView" destination="gdi-Fq-zP1" id="q2y-Yg-nhI"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5yU-H7-dVU" id="0BO-PE-1BQ"/>
+                                    <outlet property="delegate" destination="5yU-H7-dVU" id="DdT-q6-3Ds"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="kVw-Y8-QX5" firstAttribute="centerX" secondItem="Ped-QX-kxA" secondAttribute="centerX" id="5oE-oe-Jpx"/>
+                            <constraint firstItem="48s-2J-JGD" firstAttribute="leading" secondItem="Ped-QX-kxA" secondAttribute="leading" id="6nU-R0-aBX"/>
+                            <constraint firstItem="3ff-MM-eWC" firstAttribute="top" secondItem="48s-2J-JGD" secondAttribute="bottom" id="Cc1-FQ-FHv"/>
                             <constraint firstItem="kVw-Y8-QX5" firstAttribute="centerY" secondItem="Ped-QX-kxA" secondAttribute="centerY" id="DL9-nU-X7Y"/>
+                            <constraint firstAttribute="trailing" secondItem="48s-2J-JGD" secondAttribute="trailing" id="XlS-w1-HXW"/>
+                            <constraint firstItem="48s-2J-JGD" firstAttribute="top" secondItem="GGO-X8-lcb" secondAttribute="bottom" id="nT5-kd-xcE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ACCESS INFORMATION" id="duQ-nq-yLQ"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="notificationsTableView" destination="48s-2J-JGD" id="sE0-I5-6It"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O4d-tv-esV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -461,10 +554,12 @@
     </scenes>
     <resources>
         <image name="bus_number_icon" width="31" height="30"/>
+        <image name="in_access_message" width="460" height="86"/>
         <image name="logo_reaxium_signal" width="67" height="74"/>
         <image name="male_user_icon" width="121" height="132"/>
         <image name="mapa_image" width="1098" height="1097"/>
         <image name="menu_hamburger" width="32" height="32"/>
+        <image name="out_access_message" width="460" height="87"/>
         <image name="school_icon" width="31" height="30"/>
         <image name="stop_bus_icon" width="31" height="31"/>
         <image name="student_id_icon" width="31" height="30"/>
