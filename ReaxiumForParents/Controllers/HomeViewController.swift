@@ -48,6 +48,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! StudentTableViewCell
         cell.delegate = self
+        cell.setStudentDataFromObject(GlobalVariable.loggedUser.children[indexPath.section])
         return cell
     }
     

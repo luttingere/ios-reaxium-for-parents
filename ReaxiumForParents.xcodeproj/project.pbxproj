@@ -17,6 +17,13 @@
 		06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D19A6C1D00DC3100A07504 /* AccessInformationViewController.swift */; };
 		0AB7F1DBE53FE6A6C56AC765 /* Pods_ReaxiumForParents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */; };
 		6AB68B3A548E754879241DCA /* Pods_ReaxiumForParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */; };
+		952252221D034FD5008A2E1B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252211D034FD5008A2E1B /* Service.swift */; };
+		952252241D035026008A2E1B /* LoginWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252231D035026008A2E1B /* LoginWebService.swift */; };
+		952252261D035D6E008A2E1B /* Children.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252251D035D6E008A2E1B /* Children.swift */; };
+		952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252271D037C2F008A2E1B /* ReaxiumHelper.swift */; };
+		9535C58F1D031F5600FF4390 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535C58E1D031F5600FF4390 /* Constants.swift */; };
+		95C0738F1D0347DB00B4002C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0738E1D0347DB00B4002C /* User.swift */; };
+		95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C073901D0349ED00B4002C /* ReaxiumResponse.swift */; };
 		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
 		95D7ACDF1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACDE1CEE3949002BAFAC /* ReaxiumForParentsUITests.swift */; };
 		95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95D7AD131CEE4086002BAFAC /* Assets.xcassets */; };
@@ -57,6 +64,13 @@
 		17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		952252211D034FD5008A2E1B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		952252231D035026008A2E1B /* LoginWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebService.swift; sourceTree = "<group>"; };
+		952252251D035D6E008A2E1B /* Children.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Children.swift; sourceTree = "<group>"; };
+		952252271D037C2F008A2E1B /* ReaxiumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumHelper.swift; sourceTree = "<group>"; };
+		9535C58E1D031F5600FF4390 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		95C0738E1D0347DB00B4002C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		95C073901D0349ED00B4002C /* ReaxiumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumResponse.swift; sourceTree = "<group>"; };
 		95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaxiumForParents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7ACCF1CEE3949002BAFAC /* ReaxiumForParentsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReaxiumForParentsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaxiumForParentsTests.swift; sourceTree = "<group>"; };
@@ -107,13 +121,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06CE1A371CFF2AA600B7882A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		06CE1A381CFF2ABF00B7882A /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -131,6 +138,25 @@
 				FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		952252201D034F46008A2E1B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				952252211D034FD5008A2E1B /* Service.swift */,
+				952252231D035026008A2E1B /* LoginWebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		95C771321D03388A003A53B0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				95C0738E1D0347DB00B4002C /* User.swift */,
+				95C073901D0349ED00B4002C /* ReaxiumResponse.swift */,
+				952252251D035D6E008A2E1B /* Children.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		95D7ACB21CEE3948002BAFAC = {
@@ -159,10 +185,10 @@
 			isa = PBXGroup;
 			children = (
 				95D7AD061CEE3E5E002BAFAC /* Application */,
-				06CE1A371CFF2AA600B7882A /* Models */,
+				95C771321D03388A003A53B0 /* Models */,
 				06CE1A381CFF2ABF00B7882A /* Views */,
 				95D7AD0A1CEE3E6F002BAFAC /* Controllers */,
-				95D7AD091CEE3E6F002BAFAC /* Services */,
+				952252201D034F46008A2E1B /* Services */,
 				95D7AD081CEE3E6F002BAFAC /* Resources */,
 				95D7AD071CEE3E6F002BAFAC /* Supporting Files */,
 			);
@@ -191,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				95D7AD281CEE4565002BAFAC /* AppDelegate.swift */,
+				9535C58E1D031F5600FF4390 /* Constants.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -198,6 +225,7 @@
 		95D7AD071CEE3E6F002BAFAC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				952252271D037C2F008A2E1B /* ReaxiumHelper.swift */,
 				95D7AD271CEE423E002BAFAC /* ReaxiumForParents-Bridging-Header.h */,
 				95D7AD221CEE413C002BAFAC /* Info.plist */,
 			);
@@ -211,13 +239,6 @@
 				95D7AD0E1CEE3F97002BAFAC /* Media */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		95D7AD091CEE3E6F002BAFAC /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		95D7AD0A1CEE3E6F002BAFAC /* Controllers */ = {
@@ -575,14 +596,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				06CE19A61CFF137500B7882A /* LoginViewController.swift in Sources */,
+				952252221D034FD5008A2E1B /* Service.swift in Sources */,
 				06CE1A411CFF2CE800B7882A /* MenuViewController.swift in Sources */,
 				95D7AD291CEE4565002BAFAC /* AppDelegate.swift in Sources */,
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 				06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */,
+				952252241D035026008A2E1B /* LoginWebService.swift in Sources */,
+				9535C58F1D031F5600FF4390 /* Constants.swift in Sources */,
 				06D19A6B1D00DC0300A07504 /* TrackStudentViewController.swift in Sources */,
+				952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */,
 				06CE1A3B1CFF2B0F00B7882A /* StudentTableViewCell.swift in Sources */,
 				06CE1A431CFF633A00B7882A /* HomeViewController.swift in Sources */,
 				06CE1A3C1CFF2B0F00B7882A /* MenuTableViewCell.swift in Sources */,
+				952252261D035D6E008A2E1B /* Children.swift in Sources */,
+				95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */,
+				95C0738F1D0347DB00B4002C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,10 +15,13 @@ class MenuViewController: UIViewController {
     var homeOption: [String: String] = ["option": "HOME", "image": "home_icon"]
     var logoutOption: [String: String] = ["option": "LOG OUT", "image": "logout_icon"]
     var menuOptions = [Dictionary<String, String>]()
+    var navItemTitle:String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navItemTitle = "\(GlobalVariable.loggedUser.name) \(GlobalVariable.loggedUser.lastname)"
+        self.title = navItemTitle.uppercaseString
         menuOptions.append(homeOption)
         menuOptions.append(logoutOption)
         

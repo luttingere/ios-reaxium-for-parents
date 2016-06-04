@@ -8,6 +8,7 @@ pod 'MMDrawerController', '~> 0.5.7'
 pod 'KSToastView', '0.5.6'
 pod 'Fabric'
 pod 'Crashlytics'
+pod 'AlamofireObjectMapper', '~> 3.0'
 end
 
 target 'ReaxiumForParentsTests' do

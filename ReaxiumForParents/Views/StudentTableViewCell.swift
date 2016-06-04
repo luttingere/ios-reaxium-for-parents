@@ -42,8 +42,11 @@ class StudentTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setStudentDataFromDictionary(studentData: Dictionary<String, String>){
-        
+    func setStudentDataFromObject(studentData: Children){
+        studentNameLabel.text = studentData.name
+        studentIdLabel.text = String(studentData.documentID)
+        schoolNameLabel.text = studentData.schoolName
+        studentImage.getImageFromDirectory(studentData.imageUrl)
     }
 
     @IBAction func accessInfoAction(sender: AnyObject) {
@@ -52,5 +55,24 @@ class StudentTableViewCell: UITableViewCell {
     
     @IBAction func trackStudentAction(sender: AnyObject) {
         delegate?.trackStudentPressed()
+    }
+}
+
+extension UIImageView {
+    
+    func getImageFromDirectory(directory : String?) {
+        
+        self.image = UIImage(named: "male_user_icon")
+        if let path = directory{
+            if !path.isEmpty{
+                let url = NSURL(string: path)
+                
+                if let dataPicture = NSData(contentsOfURL:url!){
+                    if let picture = UIImage(data: dataPicture){
+                        self.image = picture
+                    }
+                }
+            }
+        }
     }
 }
