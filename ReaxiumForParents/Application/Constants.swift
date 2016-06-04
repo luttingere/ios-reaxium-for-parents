@@ -29,6 +29,7 @@ struct GlobalConstants {
     
     static let deviceToken = "dasdasdhalksdjhflakshf938487"
     static let devicePlatform = "IOS"
+    static let googleMapsAPIKey = "AIzaSyAHC5yHOifhJnDkwofQUo1XOWU1_0_MjhU"
 // MORE CONSTANTS...
 
 }

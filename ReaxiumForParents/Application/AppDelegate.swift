@@ -9,6 +9,7 @@
 import UIKit
 import Fabric
 import Crashlytics
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Initialize Fabric/Crashlytics
         Fabric.with([Crashlytics.self])
+        
+        GMSServices.provideAPIKey(GlobalConstants.googleMapsAPIKey)
         return true
     }
 

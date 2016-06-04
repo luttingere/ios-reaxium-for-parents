@@ -9,6 +9,7 @@ pod 'KSToastView', '0.5.6'
 pod 'Fabric'
 pod 'Crashlytics'
 pod 'AlamofireObjectMapper', '~> 3.0'
+pod 'GoogleMaps'
 end
 
 target 'ReaxiumForParentsTests' do
