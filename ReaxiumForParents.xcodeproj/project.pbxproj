@@ -23,6 +23,8 @@
 		952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252271D037C2F008A2E1B /* ReaxiumHelper.swift */; };
 		9522522A1D038AA4008A2E1B /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */; };
 		9535C58F1D031F5600FF4390 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535C58E1D031F5600FF4390 /* Constants.swift */; };
+		9552CA651D039D8D008CC8D1 /* LocationNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552CA641D039D8D008CC8D1 /* LocationNotification.swift */; };
+		9552CA671D03A01E008CC8D1 /* LocationUpdateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */; };
 		95C0738F1D0347DB00B4002C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0738E1D0347DB00B4002C /* User.swift */; };
 		95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C073901D0349ED00B4002C /* ReaxiumResponse.swift */; };
 		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
@@ -71,6 +73,8 @@
 		952252271D037C2F008A2E1B /* ReaxiumHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumHelper.swift; sourceTree = "<group>"; };
 		952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 		9535C58E1D031F5600FF4390 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9552CA641D039D8D008CC8D1 /* LocationNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNotification.swift; sourceTree = "<group>"; };
+		9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUpdateWebService.swift; sourceTree = "<group>"; };
 		95C0738E1D0347DB00B4002C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95C073901D0349ED00B4002C /* ReaxiumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumResponse.swift; sourceTree = "<group>"; };
 		95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaxiumForParents.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +152,7 @@
 			children = (
 				952252211D034FD5008A2E1B /* Service.swift */,
 				952252231D035026008A2E1B /* LoginWebService.swift */,
+				9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,6 +163,7 @@
 				95C0738E1D0347DB00B4002C /* User.swift */,
 				95C073901D0349ED00B4002C /* ReaxiumResponse.swift */,
 				952252251D035D6E008A2E1B /* Children.swift */,
+				9552CA641D039D8D008CC8D1 /* LocationNotification.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -605,6 +611,8 @@
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 				06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */,
 				952252241D035026008A2E1B /* LoginWebService.swift in Sources */,
+				9552CA671D03A01E008CC8D1 /* LocationUpdateWebService.swift in Sources */,
+				9552CA651D039D8D008CC8D1 /* LocationNotification.swift in Sources */,
 				9522522A1D038AA4008A2E1B /* NotificationTableViewCell.swift in Sources */,
 				9535C58F1D031F5600FF4390 /* Constants.swift in Sources */,
 				06D19A6B1D00DC0300A07504 /* TrackStudentViewController.swift in Sources */,

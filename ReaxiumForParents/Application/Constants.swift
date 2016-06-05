@@ -14,6 +14,7 @@ struct GlobalConstants {
     struct APIendpoint { //PRODUCTION
         static let baseUrl = "http://54.200.133.84/reaxium/"
         static let login = baseUrl+"Access/checkParentsAccess"
+        static let locationUpdate = baseUrl+"DeviceUpdateLocation/requestDeviceUpdateLocation"
     }
     //DEVICE SIZES
     struct Device {
