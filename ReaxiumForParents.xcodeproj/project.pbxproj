@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06140F1C1D05D1040033FBA8 /* UINavigationBar+Height.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06140F1B1D05D1040033FBA8 /* UINavigationBar+Height.swift */; };
+		06A5892E1D05E4320019986E /* NavigationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 06A5892D1D05E4320019986E /* NavigationView.xib */; };
+		06A589301D05E56B0019986E /* NavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A5892F1D05E56B0019986E /* NavigationView.swift */; };
 		06CE19A61CFF137500B7882A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE19A51CFF137500B7882A /* LoginViewController.swift */; };
 		06CE1A3B1CFF2B0F00B7882A /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE1A391CFF2B0F00B7882A /* StudentTableViewCell.swift */; };
 		06CE1A3C1CFF2B0F00B7882A /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE1A3A1CFF2B0F00B7882A /* MenuTableViewCell.swift */; };
@@ -56,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06140F1B1D05D1040033FBA8 /* UINavigationBar+Height.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Height.swift"; sourceTree = "<group>"; };
+		06A5892D1D05E4320019986E /* NavigationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationView.xib; sourceTree = "<group>"; };
+		06A5892F1D05E56B0019986E /* NavigationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationView.swift; sourceTree = "<group>"; };
 		06CE19A51CFF137500B7882A /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		06CE1A391CFF2B0F00B7882A /* StudentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		06CE1A3A1CFF2B0F00B7882A /* MenuTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewCell.swift; sourceTree = "<group>"; };
@@ -133,6 +139,8 @@
 				06CE1A391CFF2B0F00B7882A /* StudentTableViewCell.swift */,
 				06CE1A3A1CFF2B0F00B7882A /* MenuTableViewCell.swift */,
 				952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */,
+				06140F1B1D05D1040033FBA8 /* UINavigationBar+Height.swift */,
+				06A5892F1D05E56B0019986E /* NavigationView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 				06CE1A441CFF6D1300B7882A /* Main.storyboard */,
 				95D7AD1C1CEE40D9002BAFAC /* LaunchScreen.storyboard */,
 				95D7AD1E1CEE40D9002BAFAC /* Login.storyboard */,
+				06A5892D1D05E4320019986E /* NavigationView.xib */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -441,6 +450,7 @@
 			files = (
 				95D7AD231CEE413C002BAFAC /* Info.plist in Resources */,
 				06CE1A461CFF6D1300B7882A /* Main.storyboard in Resources */,
+				06A5892E1D05E4320019986E /* NavigationView.xib in Resources */,
 				95D7AD211CEE40D9002BAFAC /* Login.storyboard in Resources */,
 				95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */,
 				95D7AD201CEE40D9002BAFAC /* LaunchScreen.storyboard in Resources */,
@@ -611,9 +621,11 @@
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 				06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */,
 				952252241D035026008A2E1B /* LoginWebService.swift in Sources */,
+				06A589301D05E56B0019986E /* NavigationView.swift in Sources */,
 				9552CA671D03A01E008CC8D1 /* LocationUpdateWebService.swift in Sources */,
 				9552CA651D039D8D008CC8D1 /* LocationNotification.swift in Sources */,
 				9522522A1D038AA4008A2E1B /* NotificationTableViewCell.swift in Sources */,
+				06140F1C1D05D1040033FBA8 /* UINavigationBar+Height.swift in Sources */,
 				9535C58F1D031F5600FF4390 /* Constants.swift in Sources */,
 				06D19A6B1D00DC0300A07504 /* TrackStudentViewController.swift in Sources */,
 				952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */,

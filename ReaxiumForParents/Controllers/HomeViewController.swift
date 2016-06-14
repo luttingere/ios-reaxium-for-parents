@@ -15,6 +15,14 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.height = 100
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let titleView = NavigationView()
+        self.navigationItem.titleView = titleView
+
     }
 
     override func didReceiveMemoryWarning() {

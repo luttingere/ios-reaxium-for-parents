@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NavigationView" customModule="ReaxiumForParents" customModuleProvider="target">
+            <connections>
+                <outlet property="iconImageView" destination="Pep-dM-LAl" id="9ar-LH-mGb"/>
+                <outlet property="titleLabel" destination="Iac-9N-xrY" id="Rmp-Qc-kfS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="Pep-dM-LAl">
+                    <rect key="frame" x="140" y="0.0" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="CHu-Ha-NRM"/>
+                        <constraint firstAttribute="height" constant="40" id="Wmv-2E-etC"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOUR STUDENTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iac-9N-xrY">
+                    <rect key="frame" x="91" y="48" width="139" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Iac-9N-xrY" firstAttribute="top" secondItem="Pep-dM-LAl" secondAttribute="bottom" constant="8" id="Le1-OB-3vy"/>
+                <constraint firstItem="Pep-dM-LAl" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="OSV-gV-XGA"/>
+                <constraint firstItem="Iac-9N-xrY" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="afR-Pl-rWJ"/>
+                <constraint firstItem="Pep-dM-LAl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sVb-Wa-05v"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="190" y="81.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="app_icon" width="67" height="74"/>
+    </resources>
+</document>
