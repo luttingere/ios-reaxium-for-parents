@@ -22,6 +22,10 @@ class LocationNotification: ReaxiumResponse{
         super.init(map)
     }
     
+    required init(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func mapping(map: Map) {
         super.mapping(map)
         deviceLocationID <- map["ReaxiumResponse.object.0.device_location_id"]

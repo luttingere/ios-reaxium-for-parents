@@ -22,6 +22,24 @@ class User: ReaxiumResponse{
         super.init(map)
     }
     
+    required init(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        ID = aDecoder.decodeObjectForKey("ID") as! NSNumber
+        name = aDecoder.decodeObjectForKey("name") as! String
+        lastname = aDecoder.decodeObjectForKey("lastname") as! String
+        imageUrl = aDecoder.decodeObjectForKey("imageUrl") as! String
+        children = aDecoder.decodeObjectForKey("children") as! [Children]
+    }
+    
+    override func encodeWithCoder(aCoder: NSCoder) {
+        super.encodeWithCoder(aCoder)
+        aCoder.encodeObject(ID, forKey: "ID")
+        aCoder.encodeObject(name, forKey: "name")
+        aCoder.encodeObject(lastname, forKey: "lastname")
+        aCoder.encodeObject(imageUrl, forKey: "imageUrl")
+        aCoder.encodeObject(children, forKey: "children")
+    }
+    
     override func mapping(map: Map) {
         super.mapping(map)
         ID <- map["ReaxiumResponse.object.0.parent.user_id"]

@@ -77,6 +77,7 @@ extension MenuViewController:UITableViewDelegate, UITableViewDataSource{
                 self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
             }
         }else{
+            ReaxiumHelper().removeSavedUserWithKey("loggedUser")
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
             let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
                 let centerNav = UINavigationController(rootViewController: centerViewController)

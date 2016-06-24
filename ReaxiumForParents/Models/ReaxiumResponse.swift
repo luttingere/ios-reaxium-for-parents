@@ -9,11 +9,26 @@
 import Foundation
 import ObjectMapper
 
-class ReaxiumResponse: Mappable {
+class ReaxiumResponse: NSObject, NSCoding, Mappable {
     
     var code: NSNumber!
     var message: String!
     var object: AnyObject!
+    
+    override init() {}
+    
+    required init(coder aDecoder: NSCoder) {
+        super.init()
+        code = aDecoder.decodeObjectForKey("code") as! NSNumber
+        message = aDecoder.decodeObjectForKey("message") as! String
+        object = aDecoder.decodeObjectForKey("object")
+    }
+    
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(code, forKey: "code")
+        aCoder.encodeObject(message, forKey: "message")
+        aCoder.encodeObject(object, forKey: "object")
+    }
     
     required init?(_ map: Map){
         

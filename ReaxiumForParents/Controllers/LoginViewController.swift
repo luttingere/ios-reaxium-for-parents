@@ -31,6 +31,15 @@ class LoginViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
+            GlobalVariable.loggedUser = user
+            self.performSegueWithIdentifier("DRAWER_SEGUE", sender: self)
+        }
+        
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -72,6 +81,7 @@ class LoginViewController: UIViewController {
             if error == nil {
                 if let user = result as? User{
                     GlobalVariable.loggedUser = user
+                    ReaxiumHelper().saveLoggedUser(user, key: "loggedUser")
                     self.performSegueWithIdentifier("DRAWER_SEGUE", sender: self)
                 }
             }else{
