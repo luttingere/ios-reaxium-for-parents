@@ -404,6 +404,11 @@
 					95D7ACBA1CEE3948002BAFAC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 684DS5LBHA;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					95D7ACCE1CEE3949002BAFAC = {
 						CreatedOnToolsVersion = 7.3.1;
