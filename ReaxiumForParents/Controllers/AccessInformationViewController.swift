@@ -7,15 +7,28 @@
 //
 
 import UIKit
+import MMDrawerController
 
 class AccessInformationViewController: UIViewController {
 
     @IBOutlet weak var notificationsTableView: UITableView!
     
+    var notificationsArray = [AccessNotification]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+        notificationsArray = GlobalVariable.accessNotifications
+        
+        // TODO: Filtrar notificaciones con el estudiante correspondiente.
+        
+        
+        updateTableContentInset()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AccessInformationViewController.refreshAccessNotificationTable), name: GlobalConstants.accessNotificationKey, object: nil)
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,28 +36,44 @@ class AccessInformationViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Fill the cells starting from the bottom
+    func updateTableContentInset() -> Void{
+        let numRows = self.tableView(notificationsTableView, numberOfRowsInSection: 0)
+        notificationsTableView.numberOfRowsInSection(0)
+        var contentInsetTop = notificationsTableView.bounds.size.height
+        
+        for _ in 1 ..< numRows {
+            contentInsetTop -= 90
+            if (contentInsetTop <= 0) {
+                contentInsetTop = 0
+                break
+            }
+        }
+        notificationsTableView.contentInset = UIEdgeInsetsMake(contentInsetTop, 0, 0, 0);
     }
-    */
+    
+    func refreshAccessNotificationTable(){
+        notificationsArray = GlobalVariable.accessNotifications
+        notificationsTableView.reloadData()
+        notificationsTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: notificationsArray.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
+        
+    }
+
+    @IBAction func showMenuAction(sender: AnyObject) {
+        self.mm_drawerController.toggleDrawerSide(MMDrawerSide.Right, animated: true, completion: nil)
+    }
 
 }
 
 extension AccessInformationViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return notificationsArray.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! NotificationTableViewCell
-        cell.showMessageViewForNotification(indexPath.row)
+        cell.showMessageViewForNotification(notificationsArray[indexPath.row])
         return cell
     }
     

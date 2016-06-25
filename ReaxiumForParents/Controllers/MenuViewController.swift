@@ -78,6 +78,12 @@ extension MenuViewController:UITableViewDelegate, UITableViewDataSource{
             }
         }else{
             ReaxiumHelper().removeSavedUserWithKey("loggedUser")
+            
+            for oneEvent in UIApplication.sharedApplication().scheduledLocalNotifications! {
+                let notification = oneEvent as UILocalNotification
+                UIApplication.sharedApplication().cancelLocalNotification(notification)
+            }
+            
             let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
             let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
                 let centerNav = UINavigationController(rootViewController: centerViewController)

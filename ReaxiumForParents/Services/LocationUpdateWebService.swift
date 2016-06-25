@@ -19,7 +19,7 @@ class LocationUpdateWebService:  Service {
         Alamofire.request(.POST, GlobalConstants.APIendpoint.locationUpdate, parameters: parameters, encoding: .JSON)
             .responseObject { (response: Response<LocationNotification, NSError>) in
                 
-                debugPrint(response)
+                //debugPrint(response)
                 
                 if response.result.error == nil{
                     

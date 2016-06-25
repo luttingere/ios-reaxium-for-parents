@@ -10,8 +10,8 @@ import UIKit
 
 protocol StudentTableViewCellDelegate{
     
-    func accessInfoPressed() -> Void
-    func trackStudentPressed() -> Void
+    func accessInfoPressed(studentID: NSNumber) -> Void
+    func trackStudentPressed(studentID: NSNumber) -> Void
     
 }
 
@@ -30,6 +30,7 @@ class StudentTableViewCell: UITableViewCell {
     @IBOutlet weak var accessInfoButton: UIButton!
     @IBOutlet weak var trackButton: UIButton!
     var delegate: StudentTableViewCellDelegate?
+    var student: Children!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,6 +44,7 @@ class StudentTableViewCell: UITableViewCell {
     }
     
     func setStudentDataFromObject(studentData: Children){
+        student = studentData
         studentNameLabel.text = studentData.name
         studentIdLabel.text = String(studentData.documentID)
         schoolNameLabel.text = studentData.schoolName
@@ -50,11 +52,11 @@ class StudentTableViewCell: UITableViewCell {
     }
 
     @IBAction func accessInfoAction(sender: AnyObject) {
-        delegate?.accessInfoPressed()
+        delegate?.accessInfoPressed(student.ID)
     }
     
     @IBAction func trackStudentAction(sender: AnyObject) {
-        delegate?.trackStudentPressed()
+        delegate?.trackStudentPressed(student.ID)
     }
 }
 

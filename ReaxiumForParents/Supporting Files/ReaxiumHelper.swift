@@ -29,20 +29,20 @@ class ReaxiumHelper{
         
         let encodedObject = NSKeyedArchiver.archivedDataWithRootObject(user)
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(encodedObject, forKey: "loggedUser")
+        userDefaults.setObject(encodedObject, forKey: key)
         userDefaults.synchronize()
         
     }
     
     func removeSavedUserWithKey(key: String)-> Void {
         let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.removeObjectForKey("loggedUser")
+        userDefaults.removeObjectForKey(key)
         userDefaults.synchronize()
     }
     
     func loadLoggedUserWithKey(key: String)-> User? {
         let userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        if let decodedObject  = userDefaults.objectForKey("loggedUser") as? NSData{
+        if let decodedObject  = userDefaults.objectForKey(key) as? NSData{
             let user = NSKeyedUnarchiver.unarchiveObjectWithData(decodedObject) as! User
             return user
         }else{

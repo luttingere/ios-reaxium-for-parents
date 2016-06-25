@@ -428,7 +428,7 @@
         <!--ACCESS INFORMATION-->
         <scene sceneID="zF6-5c-tZY">
             <objects>
-                <viewController id="5yU-H7-dVU" customClass="AccessInformationViewController" customModule="ReaxiumForParents" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccessInformationViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5yU-H7-dVU" customClass="AccessInformationViewController" customModule="ReaxiumForParents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GGO-X8-lcb"/>
                         <viewControllerLayoutGuide type="bottom" id="3ff-MM-eWC"/>
@@ -541,7 +541,13 @@
                             <constraint firstItem="48s-2J-JGD" firstAttribute="top" secondItem="GGO-X8-lcb" secondAttribute="bottom" id="nT5-kd-xcE"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="ACCESS INFORMATION" id="duQ-nq-yLQ"/>
+                    <navigationItem key="navigationItem" title="ACCESS INFORMATION" id="duQ-nq-yLQ">
+                        <barButtonItem key="rightBarButtonItem" image="menu_hamburger" id="kG5-rF-bxD">
+                            <connections>
+                                <action selector="showMenuAction:" destination="5yU-H7-dVU" id="sjf-hU-VpO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="notificationsTableView" destination="48s-2J-JGD" id="sE0-I5-6It"/>

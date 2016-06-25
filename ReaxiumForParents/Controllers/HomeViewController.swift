@@ -8,11 +8,17 @@
 
 import UIKit
 import MMDrawerController
+import KSToastView
 
 class HomeViewController: UIViewController {
 
+    var spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    var loadingView: UIView = UIView()
+    var locationUpdate = LocationUpdateWebService()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
 
         // Do any additional setup after loading the view.
     }
@@ -27,15 +33,32 @@ class HomeViewController: UIViewController {
         
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func showActivityIndicator() {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.loadingView = UIView()
+            self.loadingView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
+            self.loadingView.center = self.view.center
+            self.loadingView.backgroundColor = UIColor.blackColor()
+            self.loadingView.alpha = 0.7
+            self.loadingView.clipsToBounds = true
+            self.loadingView.layer.cornerRadius = 10
+            
+            self.spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+            self.spinner.frame = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 80.0)
+            self.spinner.center = CGPoint(x:self.loadingView.bounds.size.width / 2, y:self.loadingView.bounds.size.height / 2)
+            
+            self.loadingView.addSubview(self.spinner)
+            self.view.addSubview(self.loadingView)
+            self.spinner.startAnimating()
+        }
     }
-    */
+    
+    func hideActivityIndicator() {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.spinner.stopAnimating()
+            self.loadingView.removeFromSuperview()
+        }
+    }
 
 }
 
@@ -70,13 +93,34 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension HomeViewController: StudentTableViewCellDelegate{
     
-    func accessInfoPressed() {
+    func accessInfoPressed(studentID: NSNumber) {
         print("accessInfoPressed")
         self.performSegueWithIdentifier("ACCESS_INFORMATION", sender: self)
     }
     
-    func trackStudentPressed() {
+    func trackStudentPressed(studentID: NSNumber) {
         print("trackStudentPressed")
-        self.performSegueWithIdentifier("TRACK_STUDENT", sender: self)
+        
+        showActivityIndicator()
+        let parameters = ["ReaxiumParameters":
+            ["DeviceUpdateLocation":
+                ["user_in_track_id":studentID,
+                    "user_stakeholder_id":GlobalVariable.loggedUser.ID,
+                    "device_token":GlobalConstants.deviceToken,
+                    "device_platform":GlobalConstants.devicePlatform]
+            ]
+        ]
+        
+        locationUpdate.callServiceObject(parameters) { (result, error) in
+            self.hideActivityIndicator()
+            if error == nil{
+                if (result as? LocationNotification) != nil{
+                    self.performSegueWithIdentifier("TRACK_STUDENT", sender: self)
+                }
+            }
+            else{
+                KSToastView.ks_showToast(error?.localizedDescription, duration: 3.0)
+            }
+        }
     }
 }

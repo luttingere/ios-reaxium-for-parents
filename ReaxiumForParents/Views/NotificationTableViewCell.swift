@@ -26,14 +26,22 @@ class NotificationTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func showMessageViewForNotification(type: Int) -> Void {
-        if (type % 2 == 0) {
+    func showMessageViewForNotification(notification: AccessNotification!) -> Void {
+        
+        switch notification.type! {
+        case .Boarding:
             incomingMessageView.hidden = false
             outcomingMessageView.hidden = true
-        }else{
+            incomingMessageLabel.text = "\(notification.message) \(notification.getTimeStringFromDate())"
+        case .Arriving:
             outcomingMessageView.hidden = false
             incomingMessageView.hidden = true
+            outcomingMessageLabel.text = "\(notification.message) \(notification.getTimeStringFromDate())"
+        case .Emergency:
+            // TODO: Cambiar por celda emergencia
+            print("Where the sun rises")
         }
+        
     }
 
 }

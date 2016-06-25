@@ -10,13 +10,13 @@ import UIKit
 import Fabric
 import Crashlytics
 import GoogleMaps
+import MMDrawerController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         registerForPushNotifications(application)
@@ -26,6 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Fabric.with([Crashlytics.self])
         
         GMSServices.provideAPIKey(GlobalConstants.googleMapsAPIKey)
+        
+        loadFirstAccessNotifications() //TODO: Delete this
         return true
     }
 
@@ -80,8 +82,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
-        let aps = userInfo["aps"] as! [String: AnyObject]
-        print("notification payload: \(aps)")
+        let aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
+        print("remote notification payload: \(aps)")
+        let info = AccessNotification(dictionary: aps)
+        GlobalVariable.accessNotifications.append(info!)
+        
+        if UIApplication.sharedApplication().applicationState == .Active {
+            if isAccessInfoViewControllerVisible() {
+                NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
+            }
+        }else{
+            
+        }
+
     }
     
     func setupNavigationBarAppearance() -> Void {
@@ -90,7 +103,101 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.whiteColor()
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
     }
+    
+    func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
+        // TODO: validar el tipo de notificacion
+        if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
+            print("user: \(user)")
+            print("local notification: \(notification)")
+            let aps = notification.userInfo as! [String: AnyObject]
+            print("local notification payload: \(aps)")
+            let info = AccessNotification(dictionary: aps)
+            GlobalVariable.accessNotifications.append(info!)
+            
+            if UIApplication.sharedApplication().applicationState == .Active {
+                if isAccessInfoViewControllerVisible() {
+                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
+                }
+            }else{
+                if isAccessInfoViewControllerVisible() {
+                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
+                }else{
+                    presentAccessInfoViewController()
+                }
+            }
 
+        }
+    }
+    
+    func loadFirstAccessNotifications(){
+        // TODO: remove this notifications
+        let dict1 = ["traffic_id":1,
+                     "traffic_type_id":1,
+                     "traffic_info":"The student got on the bus at",
+                     "access_id":141,
+                     "datetime":NSDate()]
+        
+        let dict2 = ["traffic_id":2,
+                     "traffic_type_id":2,
+                     "traffic_info":"The student got off the bus at",
+                     "access_id":141,
+                     "datetime":NSDate()]
+        
+        let info1 = AccessNotification(dictionary: dict1)
+        let info2 = AccessNotification(dictionary: dict2)
+        
+        GlobalVariable.accessNotifications.append(info1!)
+        GlobalVariable.accessNotifications.append(info2!)
+        
+    }
+    
+    func isAccessInfoViewControllerVisible() -> Bool {
+        
+        if let topController = UIApplication.topViewController() {
+            if let visibleController = topController as? MMDrawerController{
+                if let navController = UIApplication.topViewController(visibleController.centerViewController){
+                    debugPrint(navController)
+                    return navController.isKindOfClass(AccessInformationViewController)
+                }
+            }
+        }
+        
+        return false
+    }
+    
+    func presentAccessInfoViewController()-> Void{
+        if let topController = UIApplication.topViewController() {
+            if let visibleController = topController as? MMDrawerController{
+                if let centerViewController = visibleController.storyboard?.instantiateViewControllerWithIdentifier("AccessInformationViewController"){
+                    let centerNav = UINavigationController(rootViewController: centerViewController)
+                    visibleController.centerViewController = centerNav
+                    
+                    if let rightViewController = visibleController.storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"){
+                        let rightNav = UINavigationController(rootViewController: rightViewController)
+                        visibleController.rightDrawerViewController = rightNav
+                    }
+                    
+                }
+            }
+        }
+    }
+    
+}
 
+extension UIApplication {
+    class func topViewController(base: UIViewController? = UIApplication.sharedApplication().keyWindow?.rootViewController) -> UIViewController? {
+        if let nav = base as? UINavigationController {
+            return topViewController(nav.visibleViewController)
+        }
+        if let tab = base as? UITabBarController {
+            if let selected = tab.selectedViewController {
+                return topViewController(selected)
+            }
+        }
+        if let presented = base?.presentedViewController {
+            return topViewController(presented)
+        }
+        return base
+    }
 }
 
