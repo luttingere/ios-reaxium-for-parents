@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey(GlobalConstants.googleMapsAPIKey)
         
-        loadFirstAccessNotifications() //TODO: Delete this
+//        loadFirstAccessNotifications() //TODO: Delete this
         return true
     }
 
@@ -83,7 +83,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
-        let aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
+        /*let aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
         print("remote notification payload: \(aps)")
         let info = AccessNotification(dictionary: aps)
         GlobalVariable.accessNotifications.append(info!)
@@ -93,6 +93,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
             }
         }else{
+            
+        }*/
+        if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
+            print("user: \(user)")
+            let aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
+            print("local notification payload: \(aps)")
+            
+            let info = AccessNotification(dictionary: aps)
+            GlobalVariable.accessNotifications.append(info!)
+            
+            if UIApplication.sharedApplication().applicationState == .Active {
+                if isAccessInfoViewControllerVisible() {
+                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
+                }
+            }else{
+                if isAccessInfoViewControllerVisible() {
+                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
+                }else{
+                    presentAccessInfoViewController()
+                }
+            }
             
         }
 

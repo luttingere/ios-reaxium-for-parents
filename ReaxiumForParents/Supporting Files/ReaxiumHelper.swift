@@ -51,5 +51,12 @@ class ReaxiumHelper{
         
         
     }
+    
+    func getDateFromString(dateAsString: String) -> NSDate{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let newDate = dateFormatter.dateFromString(dateAsString)
+        return newDate!
+    }
 
 }

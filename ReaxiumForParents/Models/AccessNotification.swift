@@ -22,13 +22,12 @@ class AccessNotification: NSObject, NSCoding {
     var studentID: NSNumber?
     var date:NSDate?
     
-    init?(dictionary: Dictionary<String, AnyObject?>){
-        
-        self.ID = dictionary["traffic_id"] as! NSNumber
-        self.type = AccessType(rawValue: dictionary["traffic_type_id"] as! NSInteger)
+    init?(dictionary: Dictionary<String, AnyObject>){
+        self.ID = (dictionary["access_message_id"] as! NSString).integerValue
+        self.type = AccessType(rawValue: (dictionary["traffic_type"]!["traffic_type_id"] as! NSString).integerValue)
         self.message = dictionary["traffic_info"] as! String
-        self.studentID = dictionary["access_id"] as? NSNumber
-        self.date = dictionary["datetime"] as? NSDate
+        self.studentID = (dictionary["user_id"] as! NSString).integerValue
+        self.date = ReaxiumHelper().getDateFromString(dictionary["datetime"] as! String)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -53,5 +52,6 @@ class AccessNotification: NSObject, NSCoding {
         let stringDate = dateFormatter.stringFromDate(date!)
         return stringDate
     }
+    
 
 }
