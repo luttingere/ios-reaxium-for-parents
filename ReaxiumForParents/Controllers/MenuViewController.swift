@@ -8,6 +8,7 @@
 
 import UIKit
 import MMDrawerController
+import KSToastView
 
 class MenuViewController: UIViewController {
     
@@ -16,6 +17,7 @@ class MenuViewController: UIViewController {
     var logoutOption: [String: String] = ["option": "LOG OUT", "image": "logout_icon"]
     var menuOptions = [Dictionary<String, String>]()
     var navItemTitle:String!
+    var logoutWebService = LogoutWebService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +42,32 @@ class MenuViewController: UIViewController {
         menuTableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: .None)
     }
     
+    func logoutUser()-> Void{
+        
+        let parameters = ["ReaxiumParameters":
+            ["LogOut":
+                ["user_id":GlobalVariable.loggedUser.ID,
+                 "device_platform":GlobalConstants.devicePlatform]
+            ]
+        ]
+        
+        logoutWebService.callServiceObject(parameters, withCompletionBlock: { (result, error) in
+            if error == nil {
+                ReaxiumHelper().removeSavedUserWithKey("loggedUser")
+                for oneEvent in UIApplication.sharedApplication().scheduledLocalNotifications! {
+                    let notification = oneEvent as UILocalNotification
+                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+                }
+                
+                let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
+                let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
+                let centerNav = UINavigationController(rootViewController: centerViewController)
+                self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+            }else{
+                KSToastView.ks_showToast(error?.localizedDescription, duration: 3.0)
+            }
+        })
+    }
 
     /*
     // MARK: - Navigation
@@ -77,17 +105,7 @@ extension MenuViewController:UITableViewDelegate, UITableViewDataSource{
                 self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
             }
         }else{
-            ReaxiumHelper().removeSavedUserWithKey("loggedUser")
-            
-            for oneEvent in UIApplication.sharedApplication().scheduledLocalNotifications! {
-                let notification = oneEvent as UILocalNotification
-                UIApplication.sharedApplication().cancelLocalNotification(notification)
-            }
-            
-            let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-            let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
-                let centerNav = UINavigationController(rootViewController: centerViewController)
-                self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+            logoutUser()
         }
     }
 
