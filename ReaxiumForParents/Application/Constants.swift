@@ -28,9 +28,8 @@ struct GlobalConstants {
         
     }*/
     
-    static let deviceToken = "dasdasdhalksdjhflakshf938487"
     static let devicePlatform = "IOS"
-    static let googleMapsAPIKey = "AIzaSyAHC5yHOifhJnDkwofQUo1XOWU1_0_MjhU"
+    static let googleMapsAPIKey = "AIzaSyD-cOxOBGMNKteAFZggp1R_C4Uo3bKe9KQ"
     static let accessNotificationKey = "com.reaxium.accessNotificationKey"
     static let trackNotificationKey = "com.reaxium.trackNotificationKey"
 // MORE CONSTANTS...
@@ -40,4 +39,5 @@ struct GlobalConstants {
 struct GlobalVariable {
     static var loggedUser:User!
     static var accessNotifications = [AccessNotification]()
+    static var deviceToken = "simulator"
 }

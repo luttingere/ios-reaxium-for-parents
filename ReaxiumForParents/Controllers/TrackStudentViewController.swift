@@ -59,13 +59,12 @@ class TrackStudentViewController: UIViewController {
             ["DeviceUpdateLocation":
                 ["user_in_track_id":"121",
                     "user_stakeholder_id":"40",
-                    "device_token":GlobalConstants.deviceToken,
+                    "device_token":GlobalVariable.deviceToken,
                     "device_platform":GlobalConstants.devicePlatform]
             ]
         ]
 
         locationUpdate.callServiceObject(parameters) { (result, error) in
-            self.hideActivityIndicator()
             if error == nil{
                 if let location = result as? LocationNotification{
                     self.updateMarkerPositionWithCoordinates(Float(location.latitude)!, longitude:Float(location.longitude)!)
@@ -74,6 +73,7 @@ class TrackStudentViewController: UIViewController {
             else{
                 KSToastView.ks_showToast(error?.localizedDescription, duration: 3.0)
             }
+            self.hideActivityIndicator()
         }
     }
     

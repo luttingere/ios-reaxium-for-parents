@@ -11,7 +11,7 @@ import MMDrawerController
 import Alamofire
 import KSToastView
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -25,6 +25,9 @@ class LoginViewController: UIViewController {
         usernameTextField.attributedPlaceholder = attributedStringForTextFieldPlaceholder("Username")
         passwordTextField.attributedPlaceholder = attributedStringForTextFieldPlaceholder("Password")
         // Do any additional setup after loading the view.
+        let mainViewTapGesture = UITapGestureRecognizer(target: self, action: #selector(handleViewTap))
+        mainViewTapGesture.delegate = self
+        self.view.addGestureRecognizer(mainViewTapGesture)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -51,6 +54,15 @@ class LoginViewController: UIViewController {
         return attributedString
     }
     
+    func handleViewTap() -> Void {
+        if usernameTextField.isFirstResponder(){
+            usernameTextField.resignFirstResponder()
+        }else if passwordTextField.isFirstResponder(){
+            passwordTextField.resignFirstResponder()
+        }
+        
+    }
+    
     @IBAction func loginAction(sender: AnyObject) {
 
         if ReaxiumHelper().isEmptyField(usernameTextField) {
@@ -71,7 +83,7 @@ class LoginViewController: UIViewController {
             ["UserAccessData":
                 ["user_login_name":username,
                     "user_password":password,
-                    "device_token":GlobalConstants.deviceToken,
+                    "device_token":GlobalVariable.deviceToken,
                     "device_platform":GlobalConstants.devicePlatform]
             ]
         ]

@@ -106,7 +106,7 @@ extension HomeViewController: StudentTableViewCellDelegate{
             ["DeviceUpdateLocation":
                 ["user_in_track_id":studentID,
                     "user_stakeholder_id":GlobalVariable.loggedUser.ID,
-                    "device_token":GlobalConstants.deviceToken,
+                    "device_token":GlobalVariable.deviceToken,
                     "device_platform":GlobalConstants.devicePlatform]
             ]
         ]
