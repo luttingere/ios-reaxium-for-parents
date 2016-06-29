@@ -14,17 +14,22 @@ class AccessInformationViewController: UIViewController {
     @IBOutlet weak var notificationsTableView: UITableView!
     
     var notificationsArray = [AccessNotification]()
+    var targetStudentID = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        notificationsArray = GlobalVariable.accessNotifications
         
-        // TODO: Filtrar notificaciones con el estudiante correspondiente.
+        if GlobalVariable.accessNotifications[targetStudentID] != nil {
+            notificationsArray = GlobalVariable.accessNotifications[targetStudentID]!
+            
+            if notificationsArray.count > 0 {
+                updateTableContentInset()
+                refreshAccessNotificationTable()
+            }
+            
+        }
         
-        
-        updateTableContentInset()
-        refreshAccessNotificationTable()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AccessInformationViewController.refreshAccessNotificationTable), name: GlobalConstants.accessNotificationKey, object: nil)
     }
     
@@ -54,7 +59,7 @@ class AccessInformationViewController: UIViewController {
     }
     
     func refreshAccessNotificationTable(){
-        notificationsArray = GlobalVariable.accessNotifications
+        notificationsArray = GlobalVariable.accessNotifications[targetStudentID]!
         notificationsTableView.reloadData()
         notificationsTableView.scrollToRowAtIndexPath(NSIndexPath(forRow: notificationsArray.count - 1, inSection: 0), atScrollPosition: .Bottom, animated: true)
         

@@ -23,10 +23,27 @@ class AccessNotification: NSObject, NSCoding {
     var date:NSDate?
     
     init?(dictionary: Dictionary<String, AnyObject>){
-        self.ID = (dictionary["access_message_id"] as! NSString).integerValue
-        self.type = AccessType(rawValue: (dictionary["traffic_type"]!["traffic_type_id"] as! NSString).integerValue)
+        
+        if let accessId = dictionary["access_message_id"] as? NSNumber{
+            self.ID = accessId
+        }else{
+            self.ID = (dictionary["access_message_id"] as! NSString).integerValue
+        }
+        
+        if let accesstype = dictionary["traffic_type"]!["traffic_type_id"] as? NSNumber{
+            self.type = AccessType(rawValue:accesstype.integerValue)
+        }else{
+            self.type = AccessType(rawValue: (dictionary["traffic_type"]!["traffic_type_id"] as! NSString).integerValue)
+        }
+        
         self.message = dictionary["traffic_info"] as! String
-        self.studentID = (dictionary["user_id"] as! NSString).integerValue
+        
+        if let studentId = dictionary["user_id"] as? NSNumber{
+            self.studentID = studentId
+        }else{
+            self.studentID = (dictionary["user_id"] as! NSString).integerValue
+        }
+        
         self.date = ReaxiumHelper().getDateFromString(dictionary["datetime"] as! String)
     }
     

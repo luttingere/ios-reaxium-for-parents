@@ -83,25 +83,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
         
-        /*let aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
-        print("remote notification payload: \(aps)")
-        let info = AccessNotification(dictionary: aps)
-        GlobalVariable.accessNotifications.append(info!)
-        
-        if UIApplication.sharedApplication().applicationState == .Active {
-            if isAccessInfoViewControllerVisible() {
-                NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
-            }
-        }else{
-            
-        }*/
         if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
             print("user: \(user)")
-            let aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
+            var aps = userInfo["aps"]!["custom"] as! [String: AnyObject]
+            var studentId:String?
             print("local notification payload: \(aps)")
             
-            let info = AccessNotification(dictionary: aps)
-            GlobalVariable.accessNotifications.append(info!)
+            if ReaxiumHelper().isAnEmergencyNotification(aps){
+                if let childrens = aps["users_id"] as? [AnyObject] {
+                    for children in childrens{
+                        aps["user_id"] = children
+                        let info = AccessNotification(dictionary: aps)
+                        ReaxiumHelper().saveAccessNotification(info!)
+                    }
+                }
+            }else{
+                let info = AccessNotification(dictionary: aps)
+                studentId = info?.studentID?.stringValue
+                ReaxiumHelper().saveAccessNotification(info!)
+            }
             
             if UIApplication.sharedApplication().applicationState == .Active {
                 if isAccessInfoViewControllerVisible() {
@@ -111,7 +111,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if isAccessInfoViewControllerVisible() {
                     NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
                 }else{
-                    presentAccessInfoViewController()
+                    if !ReaxiumHelper().isAnEmergencyNotification(aps){
+                        presentAccessInfoViewControllerForStudent(studentId!)
+                    }
                 }
             }
             
@@ -134,7 +136,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let aps = notification.userInfo as! [String: AnyObject]
             print("local notification payload: \(aps)")
             let info = AccessNotification(dictionary: aps)
-            GlobalVariable.accessNotifications.append(info!)
+//            GlobalVariable.accessNotifications.append(info!)
+            ReaxiumHelper().saveAccessNotification(info!)
             
             if UIApplication.sharedApplication().applicationState == .Active {
                 if isAccessInfoViewControllerVisible() {
@@ -144,7 +147,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 if isAccessInfoViewControllerVisible() {
                     NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
                 }else{
-                    presentAccessInfoViewController()
+//                    presentAccessInfoViewController()
                 }
             }
 
@@ -153,23 +156,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func loadFirstAccessNotifications(){
         // TODO: remove this notifications
-        let dict1 = ["traffic_id":1,
-                     "traffic_type_id":1,
+        let dict1 = ["access_message_id":1,
+                     "traffic_type":["traffic_type_id":1],
                      "traffic_info":"The student got on the bus at",
-                     "access_id":141,
+                     "user_id":121,
                      "datetime":NSDate()]
         
-        let dict2 = ["traffic_id":2,
-                     "traffic_type_id":2,
+        let dict2 = ["access_message_id":2,
+                     "traffic_type":["traffic_type_id":2],
                      "traffic_info":"The student got off the bus at",
-                     "access_id":141,
+                     "user_id":121,
+                     "datetime":NSDate()]
+        
+        let dict3 = ["access_message_id":3,
+                     "traffic_type":["traffic_type_id":1],
+                     "traffic_info":"The student got on the bus at",
+                     "user_id":120,
                      "datetime":NSDate()]
         
         let info1 = AccessNotification(dictionary: dict1)
         let info2 = AccessNotification(dictionary: dict2)
+        let info3 = AccessNotification(dictionary: dict3)
         
-        GlobalVariable.accessNotifications.append(info1!)
-        GlobalVariable.accessNotifications.append(info2!)
+        if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
+            ReaxiumHelper().loadStudentsAccessNotificationsArray(user.children)
+            ReaxiumHelper().saveAccessNotification(info1!)
+            ReaxiumHelper().saveAccessNotification(info2!)
+            ReaxiumHelper().saveAccessNotification(info3!)
+        }
+        
         
     }
     
@@ -187,10 +202,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return false
     }
     
-    func presentAccessInfoViewController()-> Void{
+    func presentAccessInfoViewControllerForStudent(studenID:String)-> Void{
         if let topController = UIApplication.topViewController() {
             if let visibleController = topController as? MMDrawerController{
                 if let centerViewController = visibleController.storyboard?.instantiateViewControllerWithIdentifier("AccessInformationViewController"){
+                    
+                    if let centerVC = centerViewController as? AccessInformationViewController{
+                        centerVC.targetStudentID = studenID
+                    }
+                    
+                    
                     let centerNav = UINavigationController(rootViewController: centerViewController)
                     visibleController.centerViewController = centerNav
                     

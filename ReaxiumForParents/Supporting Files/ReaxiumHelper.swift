@@ -58,5 +58,36 @@ class ReaxiumHelper{
         let newDate = dateFormatter.dateFromString(dateAsString)
         return newDate!
     }
-
+    
+    func loadStudentsAccessNotificationsArray(studentsArray: [Children]) -> Void {
+        print("total students \(studentsArray.count)")
+        for student in studentsArray{
+            let key = student.ID.stringValue
+            GlobalVariable.accessNotifications[key] = [AccessNotification]()
+        }
+        
+    }
+    
+    func saveAccessNotification(notification: AccessNotification) -> Void {
+        
+        let key = notification.studentID!.stringValue
+        
+        if GlobalVariable.accessNotifications[key] != nil {
+            GlobalVariable.accessNotifications[key]!.append(notification)
+        }
+        
+    }
+    
+    func isAnEmergencyNotification(notification: Dictionary<String, AnyObject>) -> Bool {
+        
+        
+        let typeRawValue = notification["traffic_type"]!["traffic_type_id"] as? NSNumber
+        
+        if (typeRawValue == 3) {
+            return true
+        }
+        
+        return false
+    }
+ 
 }

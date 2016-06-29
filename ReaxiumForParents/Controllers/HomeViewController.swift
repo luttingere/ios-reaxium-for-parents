@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     var spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
     var loadingView: UIView = UIView()
     var locationUpdate = LocationUpdateWebService()
+    var targetStudentID:NSNumber!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,20 @@ class HomeViewController: UIViewController {
             self.loadingView.removeFromSuperview()
         }
     }
+    
+    // MARK: - Navigation
+    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+        
+        if segue.identifier == "ACCESS_INFORMATION" {
+            if let destinationViewController = segue.destinationViewController as? AccessInformationViewController{
+                destinationViewController.targetStudentID = targetStudentID.stringValue
+            }
+        }
+    }
 
 }
 
@@ -95,6 +110,7 @@ extension HomeViewController: StudentTableViewCellDelegate{
     
     func accessInfoPressed(studentID: NSNumber) {
         print("accessInfoPressed")
+        targetStudentID = studentID
         self.performSegueWithIdentifier("ACCESS_INFORMATION", sender: self)
     }
     

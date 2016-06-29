@@ -109,6 +109,8 @@ class LoginViewController: UIViewController, UIGestureRecognizerDelegate {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "DRAWER_SEGUE" {
+            ReaxiumHelper().loadStudentsAccessNotificationsArray(GlobalVariable.loggedUser.children)
+            
             if let destinationViewController = segue.destinationViewController as? MMDrawerController{
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
                 // Instantitate and set the center view controller.

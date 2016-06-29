@@ -39,6 +39,6 @@ struct GlobalConstants {
 
 struct GlobalVariable {
     static var loggedUser:User!
-    static var accessNotifications = [AccessNotification]()
+    static var accessNotifications = Dictionary<String, [AccessNotification]!>()
     static var deviceToken = "simulator"
 }
