@@ -507,9 +507,53 @@
                                                         <constraint firstAttribute="trailing" secondItem="FLH-sx-IdE" secondAttribute="trailing" constant="8" id="wQA-vK-0vi"/>
                                                     </constraints>
                                                 </view>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-XS-DYS" userLabel="Alarm">
+                                                    <rect key="frame" x="8" y="12" width="304" height="67"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7Kl-o5-RgH">
+                                                            <rect key="frame" x="8" y="14" width="40" height="40"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="40" id="6yE-ue-b5l"/>
+                                                                <constraint firstAttribute="width" constant="40" id="8Hu-Wl-8If"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXd-La-e0d">
+                                                            <rect key="frame" x="56" y="8" width="240" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="51" id="DZe-3e-DUN"/>
+                                                            </constraints>
+                                                            <string key="text">Line 1
+Line 2
+Line 3</string>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.81960784310000001" green="0.56470588239999997" blue="0.2156862745" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstItem="qXd-La-e0d" firstAttribute="centerY" secondItem="nAV-XS-DYS" secondAttribute="centerY" id="Gmq-2N-tyi"/>
+                                                        <constraint firstItem="7Kl-o5-RgH" firstAttribute="centerY" secondItem="nAV-XS-DYS" secondAttribute="centerY" id="ML2-yx-qaZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="qXd-La-e0d" secondAttribute="trailing" constant="8" id="Ojq-5Q-CXw"/>
+                                                        <constraint firstItem="qXd-La-e0d" firstAttribute="leading" secondItem="7Kl-o5-RgH" secondAttribute="trailing" constant="8" id="YnG-Vf-vb8"/>
+                                                        <constraint firstAttribute="height" constant="67" id="afi-5a-5eE"/>
+                                                        <constraint firstItem="7Kl-o5-RgH" firstAttribute="leading" secondItem="nAV-XS-DYS" secondAttribute="leading" constant="8" id="iWY-S4-yNF"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.clipsToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstItem="nAV-XS-DYS" firstAttribute="centerX" secondItem="YK2-uR-dTC" secondAttribute="centerX" id="Fd5-L5-StC"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="nAV-XS-DYS" secondAttribute="leading" id="RTM-xZ-dk2"/>
+                                                <constraint firstItem="nAV-XS-DYS" firstAttribute="top" secondItem="YK2-uR-dTC" secondAttribute="topMargin" constant="4" id="cIH-gC-XkY"/>
+                                                <constraint firstItem="nAV-XS-DYS" firstAttribute="centerY" secondItem="YK2-uR-dTC" secondAttribute="centerY" id="cLt-0W-J7e"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="nAV-XS-DYS" secondAttribute="trailing" id="h4u-g6-nA6"/>
                                                 <constraint firstItem="cW2-zy-MPx" firstAttribute="leading" secondItem="YK2-uR-dTC" secondAttribute="leading" constant="8" id="oIw-23-zCJ"/>
                                                 <constraint firstItem="cW2-zy-MPx" firstAttribute="top" secondItem="YK2-uR-dTC" secondAttribute="top" constant="12" id="pei-Do-mOP"/>
                                                 <constraint firstAttribute="trailing" secondItem="gdi-Fq-zP1" secondAttribute="trailing" constant="8" id="sSD-YI-z6f"/>
@@ -518,6 +562,8 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="alarmMessageLabel" destination="qXd-La-e0d" id="RoM-4t-4wh"/>
+                                            <outlet property="alarmMessageView" destination="nAV-XS-DYS" id="b27-nt-hW7"/>
                                             <outlet property="incomingMessageLabel" destination="l0z-OE-VwH" id="1jE-JX-Nlg"/>
                                             <outlet property="incomingMessageView" destination="cW2-zy-MPx" id="vvY-h7-hC9"/>
                                             <outlet property="outcomingMessageLabel" destination="FLH-sx-IdE" id="cs2-Da-vyq"/>
@@ -559,6 +605,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="app_icon" width="67" height="74"/>
         <image name="bus_number_icon" width="31" height="30"/>
         <image name="in_access_message" width="460" height="86"/>
         <image name="logo_reaxium_signal" width="67" height="74"/>

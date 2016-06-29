@@ -24,6 +24,7 @@ class AccessInformationViewController: UIViewController {
         
         
         updateTableContentInset()
+        refreshAccessNotificationTable()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AccessInformationViewController.refreshAccessNotificationTable), name: GlobalConstants.accessNotificationKey, object: nil)
     }
     
