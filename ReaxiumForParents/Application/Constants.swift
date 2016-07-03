@@ -16,6 +16,7 @@ struct GlobalConstants {
         static let login = baseUrl+"Access/checkParentsAccess"
         static let locationUpdate = baseUrl+"DeviceUpdateLocation/requestDeviceUpdateLocation"
         static let logout = baseUrl+"Logout/logOutParentsApp"
+        static let routes = baseUrl+"Users/getUserBusinessInformation"
     }
     //DEVICE SIZES
     struct Device {

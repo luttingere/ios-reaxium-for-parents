@@ -27,6 +27,12 @@
 		9535C58F1D031F5600FF4390 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535C58E1D031F5600FF4390 /* Constants.swift */; };
 		9552CA651D039D8D008CC8D1 /* LocationNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552CA641D039D8D008CC8D1 /* LocationNotification.swift */; };
 		9552CA671D03A01E008CC8D1 /* LocationUpdateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */; };
+		95B5286B1D29625A00280F03 /* short_notice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95B528691D29625A00280F03 /* short_notice.mp3 */; };
+		95B5286C1D29625A00280F03 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 95B5286A1D29625A00280F03 /* sound.caf */; };
+		95B5286E1D2970FD00280F03 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5286D1D2970FD00280F03 /* RouteTableViewCell.swift */; };
+		95B528701D29721800280F03 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5286F1D29721800280F03 /* RoutesViewController.swift */; };
+		95B528721D297C4300280F03 /* RoutesWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B528711D297C4300280F03 /* RoutesWebService.swift */; };
+		95B528741D297C7700280F03 /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B528731D297C7700280F03 /* Routes.swift */; };
 		95C0738F1D0347DB00B4002C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C0738E1D0347DB00B4002C /* User.swift */; };
 		95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C073901D0349ED00B4002C /* ReaxiumResponse.swift */; };
 		95D7ACD41CEE3949002BAFAC /* ReaxiumForParentsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D7ACD31CEE3949002BAFAC /* ReaxiumForParentsTests.swift */; };
@@ -79,6 +85,12 @@
 		9535C58E1D031F5600FF4390 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9552CA641D039D8D008CC8D1 /* LocationNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNotification.swift; sourceTree = "<group>"; };
 		9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUpdateWebService.swift; sourceTree = "<group>"; };
+		95B528691D29625A00280F03 /* short_notice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = short_notice.mp3; path = ../../../../../../Desktop/short_notice.mp3; sourceTree = "<group>"; };
+		95B5286A1D29625A00280F03 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound.caf; path = ../../../../../../Desktop/sound.caf; sourceTree = "<group>"; };
+		95B5286D1D2970FD00280F03 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
+		95B5286F1D29721800280F03 /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
+		95B528711D297C4300280F03 /* RoutesWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesWebService.swift; sourceTree = "<group>"; };
+		95B528731D297C7700280F03 /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
 		95C0738E1D0347DB00B4002C /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		95C073901D0349ED00B4002C /* ReaxiumResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaxiumResponse.swift; sourceTree = "<group>"; };
 		95D7ACBB1CEE3948002BAFAC /* ReaxiumForParents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReaxiumForParents.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,6 +149,7 @@
 				06CE1A391CFF2B0F00B7882A /* StudentTableViewCell.swift */,
 				06CE1A3A1CFF2B0F00B7882A /* MenuTableViewCell.swift */,
 				952252291D038AA4008A2E1B /* NotificationTableViewCell.swift */,
+				95B5286D1D2970FD00280F03 /* RouteTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -158,8 +171,18 @@
 				952252231D035026008A2E1B /* LoginWebService.swift */,
 				9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */,
 				06141E371D22D1C100870ABC /* LogoutWebService.swift */,
+				95B528711D297C4300280F03 /* RoutesWebService.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		95B528681D29624A00280F03 /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				95B528691D29625A00280F03 /* short_notice.mp3 */,
+				95B5286A1D29625A00280F03 /* sound.caf */,
+			);
+			path = Audios;
 			sourceTree = "<group>";
 		};
 		95C771321D03388A003A53B0 /* Models */ = {
@@ -170,6 +193,7 @@
 				952252251D035D6E008A2E1B /* Children.swift */,
 				9552CA641D039D8D008CC8D1 /* LocationNotification.swift */,
 				951540C41D1DC6300088AE33 /* AccessNotification.swift */,
+				95B528731D297C7700280F03 /* Routes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -265,6 +289,7 @@
 				06CE1A421CFF633A00B7882A /* HomeViewController.swift */,
 				06D19A6A1D00DC0300A07504 /* TrackStudentViewController.swift */,
 				06D19A6C1D00DC3100A07504 /* AccessInformationViewController.swift */,
+				95B5286F1D29721800280F03 /* RoutesViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,9 +307,9 @@
 		95D7AD0E1CEE3F97002BAFAC /* Media */ = {
 			isa = PBXGroup;
 			children = (
+				95B528681D29624A00280F03 /* Audios */,
 				95D7AD0F1CEE4004002BAFAC /* Images */,
 				95D7AD101CEE4004002BAFAC /* Videos */,
-				95D7AD111CEE4004002BAFAC /* Audios */,
 				95D7AD121CEE4004002BAFAC /* Fonts */,
 			);
 			path = Media;
@@ -303,13 +328,6 @@
 			children = (
 			);
 			path = Videos;
-			sourceTree = "<group>";
-		};
-		95D7AD111CEE4004002BAFAC /* Audios */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Audios;
 			sourceTree = "<group>";
 		};
 		95D7AD121CEE4004002BAFAC /* Fonts */ = {
@@ -452,10 +470,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D7AD231CEE413C002BAFAC /* Info.plist in Resources */,
+				95B5286B1D29625A00280F03 /* short_notice.mp3 in Resources */,
 				06CE1A461CFF6D1300B7882A /* Main.storyboard in Resources */,
 				95D7AD211CEE40D9002BAFAC /* Login.storyboard in Resources */,
 				95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */,
 				95D7AD201CEE40D9002BAFAC /* LaunchScreen.storyboard in Resources */,
+				95B5286C1D29625A00280F03 /* sound.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,14 +644,18 @@
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 				06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */,
 				952252241D035026008A2E1B /* LoginWebService.swift in Sources */,
+				95B528701D29721800280F03 /* RoutesViewController.swift in Sources */,
 				9552CA671D03A01E008CC8D1 /* LocationUpdateWebService.swift in Sources */,
 				9552CA651D039D8D008CC8D1 /* LocationNotification.swift in Sources */,
 				9522522A1D038AA4008A2E1B /* NotificationTableViewCell.swift in Sources */,
+				95B5286E1D2970FD00280F03 /* RouteTableViewCell.swift in Sources */,
 				9535C58F1D031F5600FF4390 /* Constants.swift in Sources */,
 				06D19A6B1D00DC0300A07504 /* TrackStudentViewController.swift in Sources */,
 				952252281D037C2F008A2E1B /* ReaxiumHelper.swift in Sources */,
 				06CE1A3B1CFF2B0F00B7882A /* StudentTableViewCell.swift in Sources */,
+				95B528741D297C7700280F03 /* Routes.swift in Sources */,
 				06CE1A431CFF633A00B7882A /* HomeViewController.swift in Sources */,
+				95B528721D297C4300280F03 /* RoutesWebService.swift in Sources */,
 				06CE1A3C1CFF2B0F00B7882A /* MenuTableViewCell.swift in Sources */,
 				952252261D035D6E008A2E1B /* Children.swift in Sources */,
 				95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */,

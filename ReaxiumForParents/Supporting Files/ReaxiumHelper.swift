@@ -58,7 +58,16 @@ class ReaxiumHelper{
         let newDate = dateFormatter.dateFromString(dateAsString)
         return newDate!
     }
-    
+
+    func getDateFromStringUTC(dateAsString: String) -> NSDate{
+        let dateFormatter = NSDateFormatter()
+//        dateFormatter.locale = NSLocale(localeIdentifier: "US_en")
+        dateFormatter.timeZone = NSTimeZone(name: "GMT")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let newDate = dateFormatter.dateFromString(dateAsString)
+        return newDate!
+    }
+
     func loadStudentsAccessNotificationsArray(studentsArray: [Children]) -> Void {
         print("total students \(studentsArray.count)")
         for student in studentsArray{
@@ -88,6 +97,14 @@ class ReaxiumHelper{
         }
         
         return false
+    }
+    
+    func getTimeStringFromDate(date:NSDate?) -> String{
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.timeZone = NSTimeZone(name: "America/New_York")
+        dateFormatter.dateFormat = "h:mm a"
+        let stringDate = dateFormatter.stringFromDate(date!)
+        return stringDate
     }
  
 }

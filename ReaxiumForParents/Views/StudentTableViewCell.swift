@@ -12,6 +12,7 @@ protocol StudentTableViewCellDelegate{
     
     func accessInfoPressed(studentID: NSNumber) -> Void
     func trackStudentPressed(studentID: NSNumber) -> Void
+    func routesInfoPressed(studentID: NSNumber) -> Void
     
 }
 
@@ -19,13 +20,13 @@ class StudentTableViewCell: UITableViewCell {
 
     @IBOutlet weak var studentImage: UIImageView!
     @IBOutlet weak var studentNameIcon: UIImageView!
-    @IBOutlet weak var busNumberIcon: UIImageView!
-    @IBOutlet weak var stopNumberIcon: UIImageView!
+//    @IBOutlet weak var busNumberIcon: UIImageView!
+//    @IBOutlet weak var stopNumberIcon: UIImageView!
     @IBOutlet weak var schoolNameIcon: UIImageView!
     @IBOutlet weak var studentNameLabel: UILabel!
     @IBOutlet weak var studentIdLabel: UILabel!
-    @IBOutlet weak var busNumberLabel: UILabel!
-    @IBOutlet weak var stopNumberLabel: UILabel!
+//    @IBOutlet weak var busNumberLabel: UILabel!
+//    @IBOutlet weak var stopNumberLabel: UILabel!
     @IBOutlet weak var schoolNameLabel: UILabel!
     @IBOutlet weak var accessInfoButton: UIButton!
     @IBOutlet weak var trackButton: UIButton!
@@ -57,6 +58,10 @@ class StudentTableViewCell: UITableViewCell {
     
     @IBAction func trackStudentAction(sender: AnyObject) {
         delegate?.trackStudentPressed(student.ID)
+    }
+
+    @IBAction func routesInfoAction(sender: AnyObject) {
+        delegate?.routesInfoPressed(student.ID)
     }
 }
 

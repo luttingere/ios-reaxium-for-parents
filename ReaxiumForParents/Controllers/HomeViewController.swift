@@ -72,6 +72,14 @@ class HomeViewController: UIViewController {
             if let destinationViewController = segue.destinationViewController as? AccessInformationViewController{
                 destinationViewController.targetStudentID = targetStudentID.stringValue
             }
+        } else if segue.identifier == "TRACK_STUDENT" {
+            if let destinationViewController = segue.destinationViewController as? TrackStudentViewController{
+                destinationViewController.targetStudentID = targetStudentID.stringValue
+            }
+        } else if segue.identifier == "ROUTES_INFORMATION" {
+            if let destinationViewController = segue.destinationViewController as? RoutesViewController{
+                destinationViewController.targetStudentID = targetStudentID.stringValue
+            }
         }
     }
 
@@ -116,7 +124,7 @@ extension HomeViewController: StudentTableViewCellDelegate{
     
     func trackStudentPressed(studentID: NSNumber) {
         print("trackStudentPressed")
-        
+        targetStudentID = studentID
         showActivityIndicator()
         let parameters = ["ReaxiumParameters":
             ["DeviceUpdateLocation":
@@ -138,5 +146,11 @@ extension HomeViewController: StudentTableViewCellDelegate{
                 KSToastView.ks_showToast(error?.localizedDescription, duration: 3.0)
             }
         }
+    }
+    
+    func routesInfoPressed(studentID: NSNumber) {
+        print("routesInfoPressed")
+        targetStudentID = studentID
+        self.performSegueWithIdentifier("ROUTES_INFORMATION", sender: self)
     }
 }

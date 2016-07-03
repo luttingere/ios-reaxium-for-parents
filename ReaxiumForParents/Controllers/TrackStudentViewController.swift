@@ -19,21 +19,22 @@ class TrackStudentViewController: UIViewController {
     var spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
     var loadingView: UIView = UIView()
     var locationUpdate = LocationUpdateWebService()
+    var targetStudentID = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         
-        let lat = CLLocationDegrees.init(-33.86)
-        let lng = CLLocationDegrees.init(151.20)
+        let lat = CLLocationDegrees.init(10.3768246)
+        let lng = CLLocationDegrees.init(-66.9565787)
 
         camera = GMSCameraPosition.cameraWithLatitude(lat, longitude: lng, zoom: 16)
         mapView = GMSMapView.mapWithFrame(CGRectZero, camera: camera)
         mapView.myLocationEnabled = true
         self.view = mapView
         
-        updateMarkerPositionWithCoordinates(-33.86, longitude: 151.20)
+        updateMarkerPositionWithCoordinates(10.3768246, longitude: -66.9565787)
         
     }
     
@@ -57,7 +58,7 @@ class TrackStudentViewController: UIViewController {
         showActivityIndicator()
         let parameters = ["ReaxiumParameters":
             ["DeviceUpdateLocation":
-                ["user_in_track_id":"121",
+                ["user_in_track_id":targetStudentID,
                     "user_stakeholder_id":"40",
                     "device_token":GlobalVariable.deviceToken,
                     "device_platform":GlobalConstants.devicePlatform]
