@@ -16,6 +16,8 @@
 		06CE1A461CFF6D1300B7882A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06CE1A441CFF6D1300B7882A /* Main.storyboard */; };
 		06D19A6B1D00DC0300A07504 /* TrackStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D19A6A1D00DC0300A07504 /* TrackStudentViewController.swift */; };
 		06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06D19A6C1D00DC3100A07504 /* AccessInformationViewController.swift */; };
+		06E7BC871D2AF0900076300B /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 06E7BC851D2AF0900076300B /* sound.caf */; };
+		06E7BC881D2AF0900076300B /* short_notice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06E7BC861D2AF0900076300B /* short_notice.mp3 */; };
 		0AB7F1DBE53FE6A6C56AC765 /* Pods_ReaxiumForParents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */; };
 		6AB68B3A548E754879241DCA /* Pods_ReaxiumForParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */; };
 		951540C51D1DC6300088AE33 /* AccessNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951540C41D1DC6300088AE33 /* AccessNotification.swift */; };
@@ -27,8 +29,6 @@
 		9535C58F1D031F5600FF4390 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535C58E1D031F5600FF4390 /* Constants.swift */; };
 		9552CA651D039D8D008CC8D1 /* LocationNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552CA641D039D8D008CC8D1 /* LocationNotification.swift */; };
 		9552CA671D03A01E008CC8D1 /* LocationUpdateWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */; };
-		95B5286B1D29625A00280F03 /* short_notice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 95B528691D29625A00280F03 /* short_notice.mp3 */; };
-		95B5286C1D29625A00280F03 /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 95B5286A1D29625A00280F03 /* sound.caf */; };
 		95B5286E1D2970FD00280F03 /* RouteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5286D1D2970FD00280F03 /* RouteTableViewCell.swift */; };
 		95B528701D29721800280F03 /* RoutesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B5286F1D29721800280F03 /* RoutesViewController.swift */; };
 		95B528721D297C4300280F03 /* RoutesWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B528711D297C4300280F03 /* RoutesWebService.swift */; };
@@ -73,6 +73,8 @@
 		06CE1A451CFF6D1300B7882A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06D19A6A1D00DC0300A07504 /* TrackStudentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrackStudentViewController.swift; sourceTree = "<group>"; };
 		06D19A6C1D00DC3100A07504 /* AccessInformationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessInformationViewController.swift; sourceTree = "<group>"; };
+		06E7BC851D2AF0900076300B /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = sound.caf; sourceTree = "<group>"; };
+		06E7BC861D2AF0900076300B /* short_notice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = short_notice.mp3; sourceTree = "<group>"; };
 		17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,8 +87,6 @@
 		9535C58E1D031F5600FF4390 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9552CA641D039D8D008CC8D1 /* LocationNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationNotification.swift; sourceTree = "<group>"; };
 		9552CA661D03A01E008CC8D1 /* LocationUpdateWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationUpdateWebService.swift; sourceTree = "<group>"; };
-		95B528691D29625A00280F03 /* short_notice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = short_notice.mp3; path = ../../../../../../Desktop/short_notice.mp3; sourceTree = "<group>"; };
-		95B5286A1D29625A00280F03 /* sound.caf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sound.caf; path = ../../../../../../Desktop/sound.caf; sourceTree = "<group>"; };
 		95B5286D1D2970FD00280F03 /* RouteTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteTableViewCell.swift; sourceTree = "<group>"; };
 		95B5286F1D29721800280F03 /* RoutesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesViewController.swift; sourceTree = "<group>"; };
 		95B528711D297C4300280F03 /* RoutesWebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutesWebService.swift; sourceTree = "<group>"; };
@@ -154,6 +154,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		06E7BC841D2AF07A0076300B /* Audios */ = {
+			isa = PBXGroup;
+			children = (
+				06E7BC851D2AF0900076300B /* sound.caf */,
+				06E7BC861D2AF0900076300B /* short_notice.mp3 */,
+			);
+			path = Audios;
+			sourceTree = "<group>";
+		};
 		3CC243D3A8B2E15ABB5BA298 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,15 +183,6 @@
 				95B528711D297C4300280F03 /* RoutesWebService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		95B528681D29624A00280F03 /* Audios */ = {
-			isa = PBXGroup;
-			children = (
-				95B528691D29625A00280F03 /* short_notice.mp3 */,
-				95B5286A1D29625A00280F03 /* sound.caf */,
-			);
-			path = Audios;
 			sourceTree = "<group>";
 		};
 		95C771321D03388A003A53B0 /* Models */ = {
@@ -307,7 +307,7 @@
 		95D7AD0E1CEE3F97002BAFAC /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				95B528681D29624A00280F03 /* Audios */,
+				06E7BC841D2AF07A0076300B /* Audios */,
 				95D7AD0F1CEE4004002BAFAC /* Images */,
 				95D7AD101CEE4004002BAFAC /* Videos */,
 				95D7AD121CEE4004002BAFAC /* Fonts */,
@@ -470,12 +470,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				95D7AD231CEE413C002BAFAC /* Info.plist in Resources */,
-				95B5286B1D29625A00280F03 /* short_notice.mp3 in Resources */,
 				06CE1A461CFF6D1300B7882A /* Main.storyboard in Resources */,
 				95D7AD211CEE40D9002BAFAC /* Login.storyboard in Resources */,
 				95D7AD141CEE4086002BAFAC /* Assets.xcassets in Resources */,
+				06E7BC871D2AF0900076300B /* sound.caf in Resources */,
+				06E7BC881D2AF0900076300B /* short_notice.mp3 in Resources */,
 				95D7AD201CEE40D9002BAFAC /* LaunchScreen.storyboard in Resources */,
-				95B5286C1D29625A00280F03 /* sound.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
