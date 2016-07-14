@@ -92,14 +92,18 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! StudentTableViewCell
-        cell.delegate = self
-        cell.setStudentDataFromObject(GlobalVariable.loggedUser.children[indexPath.section])
-        return cell
+        if let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? StudentTableViewCell{
+            cell.delegate = self
+            cell.setStudentDataFromObject(GlobalVariable.loggedUser.children[indexPath.section])
+            return cell
+        }
+        
+        return StudentTableViewCell()
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
+        return GlobalVariable.loggedUser.children.count
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

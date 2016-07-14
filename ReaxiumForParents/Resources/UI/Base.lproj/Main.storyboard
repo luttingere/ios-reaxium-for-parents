@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z8F-G3-eQY">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -444,13 +443,13 @@
                                                                 <constraint firstAttribute="height" constant="55" id="ONz-tO-gKN"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-fz-zPb">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Route Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQb-fz-zPb">
                                                             <rect key="frame" x="66" y="8" width="89" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="kIM-Qd-lsi"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Type:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xd7-0f-brm">
@@ -459,7 +458,7 @@
                                                                 <constraint firstAttribute="height" constant="21" id="Zcr-gw-ks7"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop Number:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcy-Zz-OQE">
@@ -468,7 +467,7 @@
                                                                 <constraint firstAttribute="height" constant="21" id="6fD-Ia-tJO"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPv-1e-3kX">
@@ -477,43 +476,43 @@
                                                                 <constraint firstAttribute="height" constant="21" id="UN6-Mb-B3d"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRV-bo-NhD">
-                                                            <rect key="frame" x="163" y="8" width="88" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="Route Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZRV-bo-NhD">
+                                                            <rect key="frame" x="163" y="8" width="109" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="sDt-DX-HCT"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Route Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGy-FN-KnD">
-                                                            <rect key="frame" x="163" y="28" width="69" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Route Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mGy-FN-KnD">
+                                                            <rect key="frame" x="163" y="28" width="109" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="tgb-SV-CKY"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Stop Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6m-rb-agQ">
-                                                            <rect key="frame" x="163" y="49" width="81" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Stop Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6m-rb-agQ">
+                                                            <rect key="frame" x="163" y="49" width="109" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="8yA-Hk-byq"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ei-wb-vMv">
-                                                            <rect key="frame" x="163" y="70" width="57" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ei-wb-vMv">
+                                                            <rect key="frame" x="163" y="70" width="109" height="21"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="21" id="dNr-nm-pS9"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -524,8 +523,12 @@
                                                         <constraint firstItem="EPv-1e-3kX" firstAttribute="leading" secondItem="fcy-Zz-OQE" secondAttribute="leading" id="7vu-eT-Xhm"/>
                                                         <constraint firstItem="5Ei-wb-vMv" firstAttribute="leading" secondItem="J6m-rb-agQ" secondAttribute="leading" id="8U3-M0-mDh"/>
                                                         <constraint firstItem="Xd7-0f-brm" firstAttribute="top" secondItem="xQb-fz-zPb" secondAttribute="bottom" id="9h3-gX-Jqe"/>
+                                                        <constraint firstItem="J6m-rb-agQ" firstAttribute="trailing" secondItem="bKi-NJ-Ofl" secondAttribute="trailingMargin" id="CAm-Rz-5T4"/>
                                                         <constraint firstItem="xQb-fz-zPb" firstAttribute="leading" secondItem="pS5-5x-6rE" secondAttribute="trailing" constant="8" id="HzQ-fH-PPI"/>
                                                         <constraint firstItem="pS5-5x-6rE" firstAttribute="centerY" secondItem="bKi-NJ-Ofl" secondAttribute="centerY" id="KEH-9O-vDI"/>
+                                                        <constraint firstItem="mGy-FN-KnD" firstAttribute="trailing" secondItem="bKi-NJ-Ofl" secondAttribute="trailingMargin" id="Ktd-dG-AKY"/>
+                                                        <constraint firstItem="ZRV-bo-NhD" firstAttribute="trailing" secondItem="bKi-NJ-Ofl" secondAttribute="trailingMargin" id="OzP-UC-j8S"/>
+                                                        <constraint firstItem="5Ei-wb-vMv" firstAttribute="trailing" secondItem="bKi-NJ-Ofl" secondAttribute="trailingMargin" id="Q0E-EJ-DjJ"/>
                                                         <constraint firstItem="Xd7-0f-brm" firstAttribute="leading" secondItem="xQb-fz-zPb" secondAttribute="leading" id="Sye-lj-QGC"/>
                                                         <constraint firstItem="ZRV-bo-NhD" firstAttribute="centerY" secondItem="xQb-fz-zPb" secondAttribute="centerY" id="VC5-kx-DiJ"/>
                                                         <constraint firstItem="fcy-Zz-OQE" firstAttribute="top" secondItem="Xd7-0f-brm" secondAttribute="bottom" id="ZyY-90-oPt"/>
@@ -689,7 +692,7 @@
 Line 2
 Line 3</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>

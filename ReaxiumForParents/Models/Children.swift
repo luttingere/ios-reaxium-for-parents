@@ -17,6 +17,7 @@ class Children: NSObject, NSCoding, Mappable{
     var imageUrl: String!
     var documentID: String!
     var schoolName: String!
+    var image: UIImage?
     
     override init() {}
     
@@ -50,5 +51,18 @@ class Children: NSObject, NSCoding, Mappable{
         imageUrl <- map["user_photo"]
         documentID <- map["document_id"]
         schoolName <- map["busines.business_name"]
+        
+        if let path = imageUrl{
+            if !path.isEmpty{
+                let url = NSURL(string: path)
+                if let dataPicture = NSData(contentsOfURL:url!){
+                    if let picture = UIImage(data: dataPicture){
+                        image = picture
+                    }
+                }
+            }
+        }else{
+            image = UIImage(named: "male_user_icon")
+        }
     }
 }
