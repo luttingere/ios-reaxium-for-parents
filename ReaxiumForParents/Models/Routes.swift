@@ -14,7 +14,7 @@ enum RouteType: NSInteger {
     case DropOff = 2
 }
 
-class Routes: ReaxiumResponse{
+class Routes: NSObject, Mappable{
     
     var routeID: NSNumber!
     var stopID: NSNumber!
@@ -27,21 +27,17 @@ class Routes: ReaxiumResponse{
     var startDate:NSDate?
     
     required init?(_ map: Map){
-        super.init(map)
+//        super.init(map)
     }
     
-    required init(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func mapping(map: Map) {
-        super.mapping(map)
-        routeID <- map["ReaxiumResponse.object.0.id_route"]
-        stopID <- map["ReaxiumResponse.object.0.id_stop"]
-        routeNumber <- map["ReaxiumResponse.object.0.route.route_name"]
-        routeTypeInt <- map["ReaxiumResponse.object.0.route.route_type"]
-        startDateStr <- map["ReaxiumResponse.object.0.start_time"]
-        stopNumber <- map["ReaxiumResponse.object.0.stop.stop_name"]
+    func mapping(map: Map) {
+//        super.mapping(map)
+        routeID <- map["id_route"]
+        stopID <- map["id_stop"]
+        routeNumber <- map["route.route_name"]
+        routeTypeInt <- map["route.route_type"]
+        startDateStr <- map["start_time"]
+        stopNumber <- map["stop.stop_name"]
         
         if routeTypeInt != nil {
             routeType = RouteType(rawValue: routeTypeInt)

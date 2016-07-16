@@ -29,6 +29,7 @@ class Children: NSObject, NSCoding, Mappable{
         imageUrl = aDecoder.decodeObjectForKey("imageUrl") as! String
         documentID = aDecoder.decodeObjectForKey("documentID") as! String
         schoolName = aDecoder.decodeObjectForKey("schoolName") as! String
+        image = aDecoder.decodeObjectForKey("image") as? UIImage
     }
     
     func encodeWithCoder(aCoder: NSCoder) {
@@ -38,6 +39,7 @@ class Children: NSObject, NSCoding, Mappable{
         aCoder.encodeObject(imageUrl, forKey: "imageUrl")
         aCoder.encodeObject(documentID, forKey: "documentID")
         aCoder.encodeObject(schoolName, forKey: "schoolName")
+        aCoder.encodeObject(image, forKey: "image")
     }
     
     required init?(_ map: Map){

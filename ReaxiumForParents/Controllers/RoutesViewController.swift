@@ -8,6 +8,7 @@
 
 import UIKit
 import KSToastView
+import ObjectMapper
 
 class RoutesViewController: UIViewController {
 
@@ -26,10 +27,22 @@ class RoutesViewController: UIViewController {
         
         routesWebService.callServiceObject(parameters, withCompletionBlock: { (result, error) in
             if error == nil {
-                if let route = result as? Routes{
-                    self.routesArray.append(route)
+                
+                if let object = result?.object as? NSArray{
+//                    print("object \(object)")
+                    for route in object{
+                        if let routeObj = Mapper<Routes>().map(route) {
+                            self.routesArray.append(routeObj)
+                        }
+                    }
                     self.routesTableView.reloadData()
                 }
+                
+                print("route \(self.routesArray)")
+                /*if let route = result as? Routes{
+                    self.routesArray.append(route)
+                    self.routesTableView.reloadData()
+                }*/
             }else{
                 KSToastView.ks_showToast(error?.localizedDescription, duration: 3.0)
             }

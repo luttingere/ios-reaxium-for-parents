@@ -17,7 +17,7 @@ class RoutesWebService: Service {
     func callServiceObject(parameters: [String : AnyObject]?, withCompletionBlock: ((AnyObject?, error: NSError?) -> Void)) {
         
         Alamofire.request(.POST, GlobalConstants.APIendpoint.routes, parameters: parameters, encoding: .JSON)
-            .responseObject { (response: Response<Routes, NSError>) in
+            .responseObject { (response: Response<ReaxiumResponse, NSError>) in
                 if response.result.error == nil{
                     debugPrint(response)
                     
