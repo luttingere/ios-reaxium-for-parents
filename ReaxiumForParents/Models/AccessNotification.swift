@@ -36,7 +36,9 @@ class AccessNotification: NSObject, NSCoding {
             self.type = AccessType(rawValue: (dictionary["traffic_type"]!["traffic_type_id"] as! NSString).integerValue)
         }
         
-        self.message = dictionary["traffic_info"] as! String
+        let message = dictionary["traffic_info"] as! String
+        
+        self.message = message.stringByReplacingOccurrencesOfString("@Time@", withString: "")
         
         if let studentId = dictionary["user_id"] as? NSNumber{
             self.studentID = studentId

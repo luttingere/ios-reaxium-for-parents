@@ -11,6 +11,7 @@ import Fabric
 import Crashlytics
 import GoogleMaps
 import MMDrawerController
+import AudioToolbox
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -104,6 +105,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
             
             if UIApplication.sharedApplication().applicationState == .Active {
+                playNotificationSound()
                 if isAccessInfoViewControllerVisible() {
                     NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
                 }
@@ -223,6 +225,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 }
             }
         }
+    }
+    
+    func playNotificationSound() -> Void {
+        var soundID = SystemSoundID()
+        let mainBundle = CFBundleGetMainBundle()
+        let ref = CFBundleCopyResourceURL(mainBundle, "sound.caf", nil, nil)
+        AudioServicesCreateSystemSoundID(ref, &soundID);
+        AudioServicesPlaySystemSound(soundID);
     }
     
 }

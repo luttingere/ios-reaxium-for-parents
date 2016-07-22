@@ -12,7 +12,7 @@ import UIKit
 struct GlobalConstants {
     //ENVIROMENT
     struct APIendpoint { //PRODUCTION
-        static let baseUrl = "http://54.200.133.84/reaxium/"
+        static let baseUrl = "http://54.200.133.84/reaxiumQA/"
         static let login = baseUrl+"Access/checkParentsAccess"
         static let locationUpdate = baseUrl+"DeviceUpdateLocation/requestDeviceUpdateLocation"
         static let logout = baseUrl+"Logout/logOutParentsApp"

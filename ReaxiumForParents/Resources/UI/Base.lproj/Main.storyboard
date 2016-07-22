@@ -621,14 +621,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-zy-MPx" userLabel="Incoming">
-                                                    <rect key="frame" x="8" y="12" width="180" height="67"/>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cW2-zy-MPx" userLabel="Incoming">
+                                                    <rect key="frame" x="8" y="12" width="250" height="67"/>
                                                     <subviews>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="in_access_message" translatesAutoresizingMaskIntoConstraints="NO" id="icl-Ff-ELJ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="67"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name, aboard the bus, at 08:30:00 AM" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0z-OE-VwH">
-                                                            <rect key="frame" x="8" y="8" width="164" height="32"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0z-OE-VwH">
+                                                            <rect key="frame" x="8" y="3" width="234" height="47"/>
+                                                            <string key="text">Student Name, aboard the bus, at 08:30:00 AM
+line</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -638,23 +640,25 @@
                                                     <constraints>
                                                         <constraint firstItem="icl-Ff-ELJ" firstAttribute="leading" secondItem="cW2-zy-MPx" secondAttribute="leading" id="1BL-Xq-FLK"/>
                                                         <constraint firstItem="icl-Ff-ELJ" firstAttribute="top" secondItem="cW2-zy-MPx" secondAttribute="top" id="8Me-sQ-zm1"/>
-                                                        <constraint firstAttribute="width" constant="180" id="8bo-Dr-Ggd"/>
+                                                        <constraint firstAttribute="width" constant="250" id="8bo-Dr-Ggd"/>
                                                         <constraint firstItem="l0z-OE-VwH" firstAttribute="leading" secondItem="cW2-zy-MPx" secondAttribute="leading" constant="8" id="G7q-49-RX8"/>
                                                         <constraint firstAttribute="trailing" secondItem="icl-Ff-ELJ" secondAttribute="trailing" id="RYs-v5-UUL"/>
                                                         <constraint firstAttribute="trailing" secondItem="l0z-OE-VwH" secondAttribute="trailing" constant="8" id="TmD-dB-iPM"/>
-                                                        <constraint firstItem="l0z-OE-VwH" firstAttribute="top" secondItem="cW2-zy-MPx" secondAttribute="top" constant="8" id="by6-Bb-mhI"/>
+                                                        <constraint firstItem="l0z-OE-VwH" firstAttribute="top" secondItem="cW2-zy-MPx" secondAttribute="top" constant="3" id="by6-Bb-mhI"/>
                                                         <constraint firstAttribute="height" constant="67" id="pnD-FZ-3Mb"/>
                                                         <constraint firstAttribute="bottom" secondItem="icl-Ff-ELJ" secondAttribute="bottom" id="z70-qF-gFU"/>
                                                     </constraints>
                                                 </view>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gdi-Fq-zP1" userLabel="Outcoming">
-                                                    <rect key="frame" x="132" y="12" width="180" height="67"/>
+                                                    <rect key="frame" x="62" y="12" width="250" height="67"/>
                                                     <subviews>
                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="out_access_message" translatesAutoresizingMaskIntoConstraints="NO" id="NHh-ze-rNb">
-                                                            <rect key="frame" x="0.0" y="0.0" width="180" height="67"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="67"/>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Student Name, off the bus, at 09:30:00 AM" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-sx-IdE">
-                                                            <rect key="frame" x="8" y="8" width="164" height="32"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLH-sx-IdE">
+                                                            <rect key="frame" x="8" y="3" width="234" height="47"/>
+                                                            <string key="text">Student Name, off the bus, at 09:30:00 AM
+line</string>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -667,13 +671,13 @@
                                                         <constraint firstAttribute="height" constant="67" id="TPW-gY-dpQ"/>
                                                         <constraint firstItem="NHh-ze-rNb" firstAttribute="top" secondItem="gdi-Fq-zP1" secondAttribute="top" id="Te4-8j-TDW"/>
                                                         <constraint firstItem="NHh-ze-rNb" firstAttribute="leading" secondItem="gdi-Fq-zP1" secondAttribute="leading" id="UnG-0g-jcj"/>
-                                                        <constraint firstAttribute="width" constant="180" id="WFR-aH-h6x"/>
-                                                        <constraint firstItem="FLH-sx-IdE" firstAttribute="top" secondItem="gdi-Fq-zP1" secondAttribute="top" constant="8" id="hcW-VT-ixD"/>
+                                                        <constraint firstAttribute="width" constant="250" id="WFR-aH-h6x"/>
+                                                        <constraint firstItem="FLH-sx-IdE" firstAttribute="top" secondItem="gdi-Fq-zP1" secondAttribute="top" constant="3" id="hcW-VT-ixD"/>
                                                         <constraint firstAttribute="trailing" secondItem="NHh-ze-rNb" secondAttribute="trailing" id="s68-Y1-mAp"/>
                                                         <constraint firstAttribute="trailing" secondItem="FLH-sx-IdE" secondAttribute="trailing" constant="8" id="wQA-vK-0vi"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-XS-DYS" userLabel="Alarm">
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAV-XS-DYS" userLabel="Alarm">
                                                     <rect key="frame" x="8" y="12" width="304" height="67"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_icon" translatesAutoresizingMaskIntoConstraints="NO" id="7Kl-o5-RgH">
