@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z8F-G3-eQY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Z8F-G3-eQY">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -758,6 +758,11 @@ Line 3</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ACCESS INFORMATION" id="duQ-nq-yLQ">
+                        <barButtonItem key="leftBarButtonItem" image="back-button" id="mya-5c-3Cj">
+                            <connections>
+                                <action selector="back:" destination="5yU-H7-dVU" id="IzO-DH-lWI"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="menu_hamburger" id="kG5-rF-bxD">
                             <connections>
                                 <action selector="showMenuAction:" destination="5yU-H7-dVU" id="sjf-hU-VpO"/>
@@ -776,6 +781,7 @@ Line 3</string>
     </scenes>
     <resources>
         <image name="app_icon" width="67" height="74"/>
+        <image name="back-button" width="17" height="27"/>
         <image name="in_access_message" width="460" height="86"/>
         <image name="logo_reaxium_signal" width="67" height="74"/>
         <image name="male_user_icon" width="121" height="132"/>

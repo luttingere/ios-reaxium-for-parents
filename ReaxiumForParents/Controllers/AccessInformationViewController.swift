@@ -15,6 +15,7 @@ class AccessInformationViewController: UIViewController {
     
     var notificationsArray = [AccessNotification]()
     var targetStudentID = ""
+    var showBackButton = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,11 @@ class AccessInformationViewController: UIViewController {
         }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(AccessInformationViewController.refreshAccessNotificationTable), name: GlobalConstants.accessNotificationKey, object: nil)
+        
+        if !showBackButton {
+            self.navigationItem.leftBarButtonItem = nil;
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -87,5 +93,11 @@ extension AccessInformationViewController: UITableViewDelegate, UITableViewDataS
         return 1
     }
     
+    @IBAction func back(sender: AnyObject) {
+        if let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController"){
+            let centerNav = UINavigationController(rootViewController: centerViewController)
+            self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+        }
+    }
 }
 

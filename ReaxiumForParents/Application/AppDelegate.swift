@@ -132,62 +132,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, didReceiveLocalNotification notification: UILocalNotification) {
         // TODO: validar el tipo de notificacion
-        if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
-            print("user: \(user)")
-            print("local notification: \(notification)")
-            let aps = notification.userInfo as! [String: AnyObject]
-            print("local notification payload: \(aps)")
-            let info = AccessNotification(dictionary: aps)
-//            GlobalVariable.accessNotifications.append(info!)
-            ReaxiumHelper().saveAccessNotification(info!)
-            
-            if UIApplication.sharedApplication().applicationState == .Active {
-                if isAccessInfoViewControllerVisible() {
-                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
-                }
-            }else{
-                if isAccessInfoViewControllerVisible() {
-                    NSNotificationCenter.defaultCenter().postNotificationName(GlobalConstants.accessNotificationKey, object: self)
-                }else{
-//                    presentAccessInfoViewController()
-                }
-            }
-
-        }
-    }
-    
-    func loadFirstAccessNotifications(){
-        // TODO: remove this notifications
-        let dict1 = ["access_message_id":1,
-                     "traffic_type":["traffic_type_id":1],
-                     "traffic_info":"The student got on the bus at",
-                     "user_id":121,
-                     "datetime":NSDate()]
-        
-        let dict2 = ["access_message_id":2,
-                     "traffic_type":["traffic_type_id":2],
-                     "traffic_info":"The student got off the bus at",
-                     "user_id":121,
-                     "datetime":NSDate()]
-        
-        let dict3 = ["access_message_id":3,
-                     "traffic_type":["traffic_type_id":1],
-                     "traffic_info":"The student got on the bus at",
-                     "user_id":120,
-                     "datetime":NSDate()]
-        
-        let info1 = AccessNotification(dictionary: dict1)
-        let info2 = AccessNotification(dictionary: dict2)
-        let info3 = AccessNotification(dictionary: dict3)
-        
-        if let user = ReaxiumHelper().loadLoggedUserWithKey("loggedUser"){
-            ReaxiumHelper().loadStudentsAccessNotificationsArray(user.children)
-            ReaxiumHelper().saveAccessNotification(info1!)
-            ReaxiumHelper().saveAccessNotification(info2!)
-            ReaxiumHelper().saveAccessNotification(info3!)
-        }
-        
-        
     }
     
     func isAccessInfoViewControllerVisible() -> Bool {
@@ -211,6 +155,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     
                     if let centerVC = centerViewController as? AccessInformationViewController{
                         centerVC.targetStudentID = studenID
+                        centerVC.showBackButton = true
                     }
                     
                     
