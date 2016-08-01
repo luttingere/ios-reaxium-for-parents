@@ -46,7 +46,7 @@ class StudentTableViewCell: UITableViewCell {
     
     func setStudentDataFromObject(studentData: Children){
         student = studentData
-        studentNameLabel.text = studentData.name
+        studentNameLabel.text = "\(studentData.name) \(studentData.lastname)"//studentData.name
         studentIdLabel.text = String(studentData.documentID)
         schoolNameLabel.text = studentData.schoolName
         studentImage.image = studentData.image
