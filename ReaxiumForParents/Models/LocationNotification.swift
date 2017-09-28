@@ -16,10 +16,10 @@ class LocationNotification: ReaxiumResponse{
     var deviceID: NSNumber!
     var latitude: String!
     var longitude: String!
-    var dateLocation: NSDate!
+    var dateLocation: Date!
     
-    required init?(_ map: Map){
-        super.init(map)
+    required init?(map: Map){
+        super.init(map: map)
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -27,7 +27,7 @@ class LocationNotification: ReaxiumResponse{
     }
     
     override func mapping(map: Map) {
-        super.mapping(map)
+        super.mapping(map: map)
         deviceLocationID <- map["ReaxiumResponse.object.0.device_location_id"]
         userID <- map["ReaxiumResponse.object.0.user_id"]
         deviceID <- map["ReaxiumResponse.object.0.device_id"]

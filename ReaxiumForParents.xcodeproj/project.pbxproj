@@ -19,6 +19,9 @@
 		06E7BC871D2AF0900076300B /* sound.caf in Resources */ = {isa = PBXBuildFile; fileRef = 06E7BC851D2AF0900076300B /* sound.caf */; };
 		06E7BC881D2AF0900076300B /* short_notice.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 06E7BC861D2AF0900076300B /* short_notice.mp3 */; };
 		0AB7F1DBE53FE6A6C56AC765 /* Pods_ReaxiumForParents.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */; };
+		4902B2771EC3487A0035D21F /* BusinessInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4902B2761EC3487A0035D21F /* BusinessInfo.swift */; };
+		490DBA2A1ED9E9C100BAB8F1 /* Reaxium.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 490DBA281ED9E9C100BAB8F1 /* Reaxium.xcdatamodeld */; };
+		490DBA2C1ED9E9DF00BAB8F1 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490DBA2B1ED9E9DF00BAB8F1 /* CoreDataManager.swift */; };
 		6AB68B3A548E754879241DCA /* Pods_ReaxiumForParentsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE14B6219D3D5AB028FFCE01 /* Pods_ReaxiumForParentsUITests.framework */; };
 		951540C51D1DC6300088AE33 /* AccessNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951540C41D1DC6300088AE33 /* AccessNotification.swift */; };
 		952252221D034FD5008A2E1B /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952252211D034FD5008A2E1B /* Service.swift */; };
@@ -77,6 +80,10 @@
 		06E7BC861D2AF0900076300B /* short_notice.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = short_notice.mp3; sourceTree = "<group>"; };
 		17E58C45E37E4510F3C7F696 /* Pods-ReaxiumForParentsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		464014CADE6CBEA53A49C7F4 /* Pods_ReaxiumForParents.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReaxiumForParents.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4902B2761EC3487A0035D21F /* BusinessInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusinessInfo.swift; sourceTree = "<group>"; };
+		490DBA291ED9E9C100BAB8F1 /* Reaxium.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reaxium.xcdatamodel; sourceTree = "<group>"; };
+		490DBA2B1ED9E9DF00BAB8F1 /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		49A9C5F21EC385FD00123C61 /* ReaxiumForParents.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ReaxiumForParents.entitlements; sourceTree = "<group>"; };
 		4D6F9E764BC612C07CBF8B8E /* Pods-ReaxiumForParentsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReaxiumForParentsUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests.release.xcconfig"; sourceTree = "<group>"; };
 		951540C41D1DC6300088AE33 /* AccessNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessNotification.swift; sourceTree = "<group>"; };
 		952252211D034FD5008A2E1B /* Service.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
@@ -173,6 +180,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		490DBA271ED9E9C100BAB8F1 /* Core data */ = {
+			isa = PBXGroup;
+			children = (
+				490DBA281ED9E9C100BAB8F1 /* Reaxium.xcdatamodeld */,
+				490DBA2B1ED9E9DF00BAB8F1 /* CoreDataManager.swift */,
+			);
+			path = "Core data";
+			sourceTree = "<group>";
+		};
 		952252201D034F46008A2E1B /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -194,6 +210,7 @@
 				9552CA641D039D8D008CC8D1 /* LocationNotification.swift */,
 				951540C41D1DC6300088AE33 /* AccessNotification.swift */,
 				95B528731D297C7700280F03 /* Routes.swift */,
+				4902B2761EC3487A0035D21F /* BusinessInfo.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,10 +240,12 @@
 		95D7ACBD1CEE3949002BAFAC /* ReaxiumForParents */ = {
 			isa = PBXGroup;
 			children = (
+				49A9C5F21EC385FD00123C61 /* ReaxiumForParents.entitlements */,
 				95D7AD061CEE3E5E002BAFAC /* Application */,
 				95C771321D03388A003A53B0 /* Models */,
 				06CE1A381CFF2ABF00B7882A /* Views */,
 				95D7AD0A1CEE3E6F002BAFAC /* Controllers */,
+				490DBA271ED9E9C100BAB8F1 /* Core data */,
 				952252201D034F46008A2E1B /* Services */,
 				95D7AD081CEE3E6F002BAFAC /* Resources */,
 				95D7AD071CEE3E6F002BAFAC /* Supporting Files */,
@@ -357,12 +376,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7ACE31CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParents" */;
 			buildPhases = (
-				177713C7626A487F1427C4A1 /* 📦 Check Pods Manifest.lock */,
+				177713C7626A487F1427C4A1 /* [CP] Check Pods Manifest.lock */,
 				95D7ACB71CEE3948002BAFAC /* Sources */,
 				95D7ACB81CEE3948002BAFAC /* Frameworks */,
 				95D7ACB91CEE3948002BAFAC /* Resources */,
-				DD87F0CC2F6D0DC8FD7B960F /* 📦 Embed Pods Frameworks */,
-				182C4927F4FC0AA1F25DF71D /* 📦 Copy Pods Resources */,
+				DD87F0CC2F6D0DC8FD7B960F /* [CP] Embed Pods Frameworks */,
+				182C4927F4FC0AA1F25DF71D /* [CP] Copy Pods Resources */,
 				950546181CFE7D59000691D5 /* ShellScript */,
 			);
 			buildRules = (
@@ -378,12 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7ACE61CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsTests" */;
 			buildPhases = (
-				081D16B33E93A3D83E9DE6D2 /* 📦 Check Pods Manifest.lock */,
+				081D16B33E93A3D83E9DE6D2 /* [CP] Check Pods Manifest.lock */,
 				95D7ACCB1CEE3949002BAFAC /* Sources */,
 				95D7ACCC1CEE3949002BAFAC /* Frameworks */,
 				95D7ACCD1CEE3949002BAFAC /* Resources */,
-				9C32D2E6C2B7E1CA2D8B930B /* 📦 Embed Pods Frameworks */,
-				94A3AC7636A397DC718E2E8C /* 📦 Copy Pods Resources */,
+				9C32D2E6C2B7E1CA2D8B930B /* [CP] Embed Pods Frameworks */,
+				94A3AC7636A397DC718E2E8C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -399,11 +418,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7ACE91CEE3949002BAFAC /* Build configuration list for PBXNativeTarget "ReaxiumForParentsUITests" */;
 			buildPhases = (
-				FE8155C96D9253A2E177ADF3 /* 📦 Check Pods Manifest.lock */,
+				FE8155C96D9253A2E177ADF3 /* [CP] Check Pods Manifest.lock */,
 				95D7ACD61CEE3949002BAFAC /* Sources */,
 				95D7ACD71CEE3949002BAFAC /* Frameworks */,
 				95D7ACD81CEE3949002BAFAC /* Resources */,
-				34DB9B71809A862F51D7BBD9 /* 📦 Copy Pods Resources */,
+				34DB9B71809A862F51D7BBD9 /* [CP] Copy Pods Resources */,
+				D07E034373595BA1E61C3DF6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -428,6 +448,8 @@
 					95D7ACBA1CEE3948002BAFAC = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 684DS5LBHA;
+						LastSwiftMigration = 0830;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Push = {
 								enabled = 1;
@@ -436,10 +458,12 @@
 					};
 					95D7ACCE1CEE3949002BAFAC = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 95D7ACBA1CEE3948002BAFAC;
 					};
 					95D7ACD91CEE3949002BAFAC = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0830;
 						TestTargetID = 95D7ACBA1CEE3948002BAFAC;
 					};
 				};
@@ -496,44 +520,44 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		081D16B33E93A3D83E9DE6D2 /* 📦 Check Pods Manifest.lock */ = {
+		081D16B33E93A3D83E9DE6D2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		177713C7626A487F1427C4A1 /* 📦 Check Pods Manifest.lock */ = {
+		177713C7626A487F1427C4A1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		182C4927F4FC0AA1F25DF71D /* 📦 Copy Pods Resources */ = {
+		182C4927F4FC0AA1F25DF71D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,14 +565,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParents/Pods-ReaxiumForParents-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		34DB9B71809A862F51D7BBD9 /* 📦 Copy Pods Resources */ = {
+		34DB9B71809A862F51D7BBD9 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -556,14 +580,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		94A3AC7636A397DC718E2E8C /* 📦 Copy Pods Resources */ = {
+		94A3AC7636A397DC718E2E8C /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,16 +606,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Fabric/run\" 19743b86c2d6bfbb2c287794c665f460d57c0ee4 c06d4da3eeadccff53d5646ac4a1590dc96492532518e7b25bfecc6ae2c5053e";
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 76181343f5f338ffc5c6e87bc1ca54781620a30d 1b62ef048b9802a39d884591d8b9e2424c08b52cdcfe17847842a9fb26fd3aa5";
 		};
-		9C32D2E6C2B7E1CA2D8B930B /* 📦 Embed Pods Frameworks */ = {
+		9C32D2E6C2B7E1CA2D8B930B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -599,14 +623,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParentsTests/Pods-ReaxiumForParentsTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DD87F0CC2F6D0DC8FD7B960F /* 📦 Embed Pods Frameworks */ = {
+		D07E034373595BA1E61C3DF6 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParentsUITests/Pods-ReaxiumForParentsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD87F0CC2F6D0DC8FD7B960F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,19 +653,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ReaxiumForParents/Pods-ReaxiumForParents-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FE8155C96D9253A2E177ADF3 /* 📦 Check Pods Manifest.lock */ = {
+		FE8155C96D9253A2E177ADF3 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -641,6 +680,7 @@
 				06CE1A411CFF2CE800B7882A /* MenuViewController.swift in Sources */,
 				95D7AD291CEE4565002BAFAC /* AppDelegate.swift in Sources */,
 				951540C51D1DC6300088AE33 /* AccessNotification.swift in Sources */,
+				4902B2771EC3487A0035D21F /* BusinessInfo.swift in Sources */,
 				95D7AD261CEE4218002BAFAC /* ViewController.swift in Sources */,
 				06D19A6D1D00DC3100A07504 /* AccessInformationViewController.swift in Sources */,
 				952252241D035026008A2E1B /* LoginWebService.swift in Sources */,
@@ -660,6 +700,8 @@
 				952252261D035D6E008A2E1B /* Children.swift in Sources */,
 				95C073911D0349ED00B4002C /* ReaxiumResponse.swift in Sources */,
 				06141E381D22D1C100870ABC /* LogoutWebService.swift in Sources */,
+				490DBA2A1ED9E9C100BAB8F1 /* Reaxium.xcdatamodeld in Sources */,
+				490DBA2C1ED9E9DF00BAB8F1 /* CoreDataManager.swift in Sources */,
 				95C0738F1D0347DB00B4002C /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -814,15 +856,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ReaxiumForParents/ReaxiumForParents.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 684DS5LBHA;
 				INFOPLIST_FILE = "$(SRCROOT)/ReaxiumForParents/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.t4ss.ReaxiumForParents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ReaxiumForParents/Supporting Files/ReaxiumForParents-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -833,14 +879,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ReaxiumForParents/ReaxiumForParents.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 684DS5LBHA;
 				INFOPLIST_FILE = "$(SRCROOT)/ReaxiumForParents/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.t4ss.ReaxiumForParents;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ReaxiumForParents/Supporting Files/ReaxiumForParents-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -854,6 +905,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaxiumForParents.app/ReaxiumForParents";
 			};
 			name = Debug;
@@ -867,6 +919,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReaxiumForParents.app/ReaxiumForParents";
 			};
 			name = Release;
@@ -879,6 +932,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ReaxiumForParents;
 			};
 			name = Debug;
@@ -891,6 +945,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.reaxium.ReaxiumForParentsUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = ReaxiumForParents;
 			};
 			name = Release;
@@ -935,6 +990,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		490DBA281ED9E9C100BAB8F1 /* Reaxium.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				490DBA291ED9E9C100BAB8F1 /* Reaxium.xcdatamodel */,
+			);
+			currentVersion = 490DBA291ED9E9C100BAB8F1 /* Reaxium.xcdatamodel */;
+			path = Reaxium.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 95D7ACB31CEE3948002BAFAC /* Project object */;
 }

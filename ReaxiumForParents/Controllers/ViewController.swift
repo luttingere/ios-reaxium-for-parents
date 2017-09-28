@@ -13,7 +13,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        self.performSegueWithIdentifier("DRAWER_SEGUE", sender: self)
+        self.performSegue(withIdentifier: "DRAWER_SEGUE", sender: self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -24,19 +24,19 @@ class ViewController: UIViewController {
     // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destinationViewController.
      // Pass the selected object to the new view controller.
         if segue.identifier == "DRAWER_SEGUE" {
-            if let destinationViewController = segue.destinationViewController as? MMDrawerController{
+            if let destinationViewController = segue.destination as? MMDrawerController{
                 
                 // Instantitate and set the center view controller.
-                let centerViewController:UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController"))!
+                let centerViewController:UIViewController = (self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController"))!
                 
                 destinationViewController.centerViewController = centerViewController
                 
                 // Instantiate and set the right drawer controller.
-                let rightViewController:UIViewController = (self.storyboard?.instantiateViewControllerWithIdentifier("MenuViewController"))!
+                let rightViewController:UIViewController = (self.storyboard?.instantiateViewController(withIdentifier: "MenuViewController"))!
                 
                 destinationViewController.rightDrawerViewController = rightViewController
             

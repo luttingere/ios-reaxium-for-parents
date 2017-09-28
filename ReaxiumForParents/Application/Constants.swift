@@ -12,7 +12,8 @@ import UIKit
 struct GlobalConstants {
     //ENVIROMENT
     struct APIendpoint { //PRODUCTION
-        static let baseUrl = "http://54.191.137.124/reaxiumQA/"
+        static let baseUrl = "http://34.208.166.161/school_bus_cloud/"
+//        static let baseUrl = "http://54.202.10.0/reaxiumQA/"
         static let login = baseUrl+"Access/checkParentsAccess"
         static let locationUpdate = baseUrl+"DeviceUpdateLocation/requestDeviceUpdateLocation"
         static let logout = baseUrl+"Logout/logOutParentsApp"
@@ -20,8 +21,8 @@ struct GlobalConstants {
     }
     //DEVICE SIZES
     struct Device {
-        static let screenWidth = UIScreen.mainScreen().bounds.width
-        static let screenHeight = UIScreen.mainScreen().bounds.height
+        static let screenWidth = UIScreen.main.bounds.width
+        static let screenHeight = UIScreen.main.bounds.height
         static let isIphone4orLess = (screenHeight < 568.0)
         static let isIphone5 = (screenHeight == 568.0)
         static let isIphone6 = (screenHeight == 667.0)
@@ -33,6 +34,7 @@ struct GlobalConstants {
     static let devicePlatform = "IOS"
     static let googleMapsAPIKey = "AIzaSyD-cOxOBGMNKteAFZggp1R_C4Uo3bKe9KQ"
     static let accessNotificationKey = "com.reaxium.accessNotificationKey"
+    static let accessHomeNotificationKey = "com.reaxium.accessHomeNotificationKey"
     static let trackNotificationKey = "com.reaxium.trackNotificationKey"
 // MORE CONSTANTS...
 
@@ -42,4 +44,8 @@ struct GlobalVariable {
     static var loggedUser:User!
     static var accessNotifications = Dictionary<String, [AccessNotification]!>()
     static var deviceToken = "simulator"
+}
+
+struct ApplicationColors {
+    static var orange = UIColor(red: 255.00/255.0, green: 133.0/255.0, blue: 2.0/255.0, alpha: 1.0)
 }

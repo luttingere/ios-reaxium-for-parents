@@ -10,9 +10,9 @@ import UIKit
 
 protocol StudentTableViewCellDelegate{
     
-    func accessInfoPressed(studentID: NSNumber) -> Void
-    func trackStudentPressed(studentID: NSNumber) -> Void
-    func routesInfoPressed(studentID: NSNumber) -> Void
+    func accessInfoPressed(_ studentID: NSNumber) -> Void
+    func trackStudentPressed(_ studentID: NSNumber) -> Void
+    func routesInfoPressed(_ studentID: NSNumber) -> Void
     
 }
 
@@ -29,6 +29,7 @@ class StudentTableViewCell: UITableViewCell {
 //    @IBOutlet weak var stopNumberLabel: UILabel!
     @IBOutlet weak var schoolNameLabel: UILabel!
     @IBOutlet weak var accessInfoButton: UIButton!
+    @IBOutlet var accessInfoBadgeLabel: UILabel!
     @IBOutlet weak var trackButton: UIButton!
     var delegate: StudentTableViewCellDelegate?
     var student: Children!
@@ -36,31 +37,50 @@ class StudentTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        studentImage.layer.borderColor = ApplicationColors.orange.cgColor
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func setStudentDataFromObject(studentData: Children){
+    func setStudentDataFromObject(_ studentData: Children){
         student = studentData
-        studentNameLabel.text = "\(studentData.name) \(studentData.lastname)"//studentData.name
+        studentNameLabel.text = "\(studentData.name!) \(studentData.lastname!)"//studentData.name
         studentIdLabel.text = String(studentData.documentID)
         schoolNameLabel.text = studentData.schoolName
         studentImage.image = studentData.image
+        updateBadgeCounter(student.ID.stringValue)
+    }
+    
+    func updateBadgeCounter(_ studentId: String) {
+        let counter = CoreDataManager.shared.countUnreaded(studentId)
+        
+        if counter > 0 {
+            if counter > 99 {
+                accessInfoBadgeLabel.text = "99+"
+            }
+            else {
+                accessInfoBadgeLabel.text = String(counter)
+            }
+            accessInfoBadgeLabel.isHidden = false
+        }
+        else {
+            accessInfoBadgeLabel.isHidden = true
+        }
     }
 
-    @IBAction func accessInfoAction(sender: AnyObject) {
+    @IBAction func accessInfoAction(_ sender: AnyObject) {
         delegate?.accessInfoPressed(student.ID)
     }
     
-    @IBAction func trackStudentAction(sender: AnyObject) {
+    @IBAction func trackStudentAction(_ sender: AnyObject) {
         delegate?.trackStudentPressed(student.ID)
     }
 
-    @IBAction func routesInfoAction(sender: AnyObject) {
+    @IBAction func routesInfoAction(_ sender: AnyObject) {
         delegate?.routesInfoPressed(student.ID)
     }
 }

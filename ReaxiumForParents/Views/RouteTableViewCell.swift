@@ -20,21 +20,21 @@ class RouteTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
     }
     
-    func loadCellWithRouteInformation(route: Routes!) -> Void {
+    func loadCellWithRouteInformation(_ route: Routes!) -> Void {
         routeNameLabel.text = route.routeNumber
         stopNumberLabel.text = route.stopNumber
         sheduleLabel.text = route.scheduleTime
         
         switch route.routeType! {
-        case .PickUp:
+        case .pickUp:
             routeTypeLabel.text = "Pick Up"
-        case .DropOff:
+        case .dropOff:
             routeTypeLabel.text = "Drop Off"
         }
     }

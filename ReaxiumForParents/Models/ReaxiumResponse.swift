@@ -19,18 +19,18 @@ class ReaxiumResponse: NSObject, NSCoding, Mappable {
     
     required init(coder aDecoder: NSCoder) {
         super.init()
-        code = aDecoder.decodeObjectForKey("code") as! NSNumber
-        message = aDecoder.decodeObjectForKey("message") as! String
-        object = aDecoder.decodeObjectForKey("object")
+        code = aDecoder.decodeObject(forKey: "code") as! NSNumber
+        message = aDecoder.decodeObject(forKey: "message") as! String
+        object = aDecoder.decodeObject(forKey: "object") as AnyObject
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(code, forKey: "code")
-        aCoder.encodeObject(message, forKey: "message")
-        aCoder.encodeObject(object, forKey: "object")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(code, forKey: "code")
+        aCoder.encode(message, forKey: "message")
+        aCoder.encode(object, forKey: "object")
     }
     
-    required init?(_ map: Map){
+    required init?(map: Map){
         
     }
     

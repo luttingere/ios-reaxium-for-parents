@@ -12,16 +12,22 @@ import KSToastView
 
 class HomeViewController: UIViewController {
 
-    var spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+    @IBOutlet var studentTableView: UITableView!
+    var spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
     var loadingView: UIView = UIView()
     var locationUpdate = LocationUpdateWebService()
     var targetStudentID:NSNumber!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.Plain, target:nil, action:nil)
-
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeViewController.reloadView), name: NSNotification.Name(rawValue: GlobalConstants.accessHomeNotificationKey), object: nil)
+        personalizeNavigationBar("YOUR STUDENTS")
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title:"", style:.plain, target:nil, action:nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadView()
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,22 +35,26 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func showMenuAction(sender: AnyObject) {
-        self.mm_drawerController.toggleDrawerSide(MMDrawerSide.Right, animated: true, completion: nil)
+    func reloadView() {
+        studentTableView.reloadData()
+    }
+    
+    @IBAction func showMenuAction(_ sender: AnyObject) {
+        self.mm_drawerController.toggle(MMDrawerSide.right, animated: true, completion: nil)
         
     }
     
     func showActivityIndicator() {
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.loadingView = UIView()
             self.loadingView.frame = CGRect(x: 0.0, y: 0.0, width: 100.0, height: 100.0)
             self.loadingView.center = self.view.center
-            self.loadingView.backgroundColor = UIColor.blackColor()
+            self.loadingView.backgroundColor = UIColor.black
             self.loadingView.alpha = 0.7
             self.loadingView.clipsToBounds = true
             self.loadingView.layer.cornerRadius = 10
             
-            self.spinner = UIActivityIndicatorView(activityIndicatorStyle: .WhiteLarge)
+            self.spinner = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
             self.spinner.frame = CGRect(x: 0.0, y: 0.0, width: 80.0, height: 80.0)
             self.spinner.center = CGPoint(x:self.loadingView.bounds.size.width / 2, y:self.loadingView.bounds.size.height / 2)
             
@@ -55,7 +65,7 @@ class HomeViewController: UIViewController {
     }
     
     func hideActivityIndicator() {
-        dispatch_async(dispatch_get_main_queue()) {
+        DispatchQueue.main.async {
             self.spinner.stopAnimating()
             self.loadingView.removeFromSuperview()
         }
@@ -64,20 +74,20 @@ class HomeViewController: UIViewController {
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         
         if segue.identifier == "ACCESS_INFORMATION" {
-            if let destinationViewController = segue.destinationViewController as? AccessInformationViewController{
+            if let destinationViewController = segue.destination as? AccessInformationViewController{
                 destinationViewController.targetStudentID = targetStudentID.stringValue
             }
         } else if segue.identifier == "TRACK_STUDENT" {
-            if let destinationViewController = segue.destinationViewController as? TrackStudentViewController{
+            if let destinationViewController = segue.destination as? TrackStudentViewController{
                 destinationViewController.targetStudentID = targetStudentID.stringValue
             }
         } else if segue.identifier == "ROUTES_INFORMATION" {
-            if let destinationViewController = segue.destinationViewController as? RoutesViewController{
+            if let destinationViewController = segue.destination as? RoutesViewController{
                 destinationViewController.targetStudentID = targetStudentID.stringValue
             }
         }
@@ -87,12 +97,12 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as? StudentTableViewCell{
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? StudentTableViewCell{
             cell.delegate = self
             cell.setStudentDataFromObject(GlobalVariable.loggedUser.children[indexPath.section])
             return cell
@@ -102,17 +112,17 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
         
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return GlobalVariable.loggedUser.children.count
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 28.0
     }
     
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let header = UIView()
-        header.backgroundColor = UIColor.clearColor()
+        header.backgroundColor = UIColor.clear
         return header
     }
     
@@ -120,13 +130,13 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
 
 extension HomeViewController: StudentTableViewCellDelegate{
     
-    func accessInfoPressed(studentID: NSNumber) {
+    func accessInfoPressed(_ studentID: NSNumber) {
         print("accessInfoPressed")
         targetStudentID = studentID
-        self.performSegueWithIdentifier("ACCESS_INFORMATION", sender: self)
+        self.performSegue(withIdentifier: "ACCESS_INFORMATION", sender: self)
     }
     
-    func trackStudentPressed(studentID: NSNumber) {
+    func trackStudentPressed(_ studentID: NSNumber) {
         print("trackStudentPressed")
         targetStudentID = studentID
         showActivityIndicator()
@@ -139,11 +149,11 @@ extension HomeViewController: StudentTableViewCellDelegate{
             ]
         ]
         
-        locationUpdate.callServiceObject(parameters) { (result, error) in
+        locationUpdate.callServiceObject(parameters as [String : AnyObject]) { (result, error) in
             self.hideActivityIndicator()
             if error == nil{
                 if (result as? LocationNotification) != nil{
-                    self.performSegueWithIdentifier("TRACK_STUDENT", sender: self)
+                    self.performSegue(withIdentifier: "TRACK_STUDENT", sender: self)
                 }
             }
             else{
@@ -152,9 +162,9 @@ extension HomeViewController: StudentTableViewCellDelegate{
         }
     }
     
-    func routesInfoPressed(studentID: NSNumber) {
+    func routesInfoPressed(_ studentID: NSNumber) {
         print("routesInfoPressed")
         targetStudentID = studentID
-        self.performSegueWithIdentifier("ROUTES_INFORMATION", sender: self)
+        self.performSegue(withIdentifier: "ROUTES_INFORMATION", sender: self)
     }
 }

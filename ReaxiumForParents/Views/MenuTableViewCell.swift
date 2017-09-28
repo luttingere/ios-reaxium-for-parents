@@ -18,7 +18,7 @@ class MenuTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         // Configure the view for the selected state
         selectedBackgroundView = UIView()
@@ -28,13 +28,13 @@ class MenuTableViewCell: UITableViewCell {
         if selected{
             iconImage.tintColor = UIColor(red: 221.0/255.0, green: 191.0/255.0, blue: 139.0/255.0, alpha: 1.0)
         }else{
-            iconImage.tintColor = UIColor.lightGrayColor()
+            iconImage.tintColor = UIColor.lightGray
         }
     }
     
-    func setMenuCellContentWithData(menuData: Dictionary<String, String>){
+    func setMenuCellContentWithData(_ menuData: Dictionary<String, String>){
         iconImage.image = UIImage(named: menuData["image"]!)
-        iconImage.image? = (iconImage.image?.imageWithRenderingMode(.AlwaysTemplate))!
+        iconImage.image? = (iconImage.image?.withRenderingMode(.alwaysTemplate))!
         optionTitle.text = menuData["option"]
     }
 

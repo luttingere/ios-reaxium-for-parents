@@ -10,8 +10,8 @@ import Foundation
 
 @objc protocol Service{
     
-    optional func callServiceObject(parameters:[String: AnyObject]?, withCompletionBlock: ((AnyObject?, error: NSError?) -> Void))
+    @objc optional func callServiceObject(_ parameters:[String: AnyObject]?, withCompletionBlock: ((AnyObject?, _ error: NSError?) -> Void))
     
-    optional func callServiceArray(parameters:[String: AnyObject]?, withCompletionBlock: ([AnyObject]?, error: NSError?) -> Void)
+    @objc optional func callServiceArray(_ parameters:[String: AnyObject]?, withCompletionBlock: ([AnyObject]?, _ error: NSError?) -> Void)
     
 }

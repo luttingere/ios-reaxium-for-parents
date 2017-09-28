@@ -10,8 +10,8 @@ import UIKit
 import ObjectMapper
 
 enum RouteType: NSInteger {
-    case PickUp = 1
-    case DropOff = 2
+    case pickUp = 1
+    case dropOff = 2
 }
 
 class Routes: NSObject, Mappable{
@@ -24,9 +24,9 @@ class Routes: NSObject, Mappable{
     var scheduleTime: String!
     var stopNumber: String!
     var startDateStr:String!
-    var startDate:NSDate?
+    var startDate:Date?
     
-    required init?(_ map: Map){
+    required init?(map: Map){
 //        super.init(map)
     }
     

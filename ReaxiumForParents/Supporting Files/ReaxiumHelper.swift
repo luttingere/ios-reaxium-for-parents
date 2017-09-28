@@ -11,12 +11,12 @@ import UIKit
 
 class ReaxiumHelper{
     
-    func isEmptyField(textField: UITextField) -> Bool {
+    func isEmptyField(_ textField: UITextField) -> Bool {
         
-        let whitespace:NSCharacterSet = NSCharacterSet.whitespaceAndNewlineCharacterSet()
-        let trimmed: NSString? = textField.text?.stringByTrimmingCharactersInSet(whitespace)
+        let whitespace:CharacterSet = CharacterSet.whitespacesAndNewlines
+        let trimmed: NSString? = textField.text?.trimmingCharacters(in: whitespace) as! NSString
         
-        if let text = textField.text where text.isEmpty{
+        if let text = textField.text, text.isEmpty{
             return true
         }else if trimmed!.length == 0{
             return true
@@ -25,25 +25,25 @@ class ReaxiumHelper{
         }
     }
     
-    func saveLoggedUser(user: User, key: String) -> Void {
+    func saveLoggedUser(_ user: User, key: String) -> Void {
         
-        let encodedObject = NSKeyedArchiver.archivedDataWithRootObject(user)
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.setObject(encodedObject, forKey: key)
+        let encodedObject = NSKeyedArchiver.archivedData(withRootObject: user)
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(encodedObject, forKey: key)
         userDefaults.synchronize()
         
     }
     
-    func removeSavedUserWithKey(key: String)-> Void {
-        let userDefaults = NSUserDefaults.standardUserDefaults()
-        userDefaults.removeObjectForKey(key)
+    func removeSavedUserWithKey(_ key: String)-> Void {
+        let userDefaults = UserDefaults.standard
+        userDefaults.removeObject(forKey: key)
         userDefaults.synchronize()
     }
     
-    func loadLoggedUserWithKey(key: String)-> User? {
-        let userDefaults:NSUserDefaults = NSUserDefaults.standardUserDefaults()
-        if let decodedObject  = userDefaults.objectForKey(key) as? NSData{
-            let user = NSKeyedUnarchiver.unarchiveObjectWithData(decodedObject) as! User
+    func loadLoggedUserWithKey(_ key: String)-> User? {
+        let userDefaults:UserDefaults = UserDefaults.standard
+        if let decodedObject  = userDefaults.object(forKey: key) as? Data{
+            let user = NSKeyedUnarchiver.unarchiveObject(with: decodedObject) as! User
             return user
         }else{
             return nil
@@ -52,23 +52,45 @@ class ReaxiumHelper{
         
     }
     
-    func getDateFromString(dateAsString: String) -> NSDate{
-        let dateFormatter = NSDateFormatter()
+    static func getComponentsFrom(date: Date) -> DateComponents {
+        return Calendar.current.dateComponents([.day, .month, .year], from: date)
+    }
+    
+    static func getTimeStringFromDate(date: NSDate) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        let stringDate = dateFormatter.string(from: date as Date)
+        return stringDate
+    }
+    
+    func getDateFromString(_ dateAsString: String?) -> Date {
+        let dateFormatter = DateFormatter()
+        var date: Date?
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let newDate = dateFormatter.dateFromString(dateAsString)
-        return newDate!
+        
+        guard let strDate = dateAsString else {
+            return Date()
+        }
+        
+        date = dateFormatter.date(from: strDate)
+        
+        guard date != nil else {
+            return Date()
+        }
+        
+        return date!
     }
 
-    func getDateFromStringUTC(dateAsString: String) -> NSDate{
-        let dateFormatter = NSDateFormatter()
+    func getDateFromStringUTC(_ dateAsString: String) -> Date{
+        let dateFormatter = DateFormatter()
 //        dateFormatter.locale = NSLocale(localeIdentifier: "US_en")
-        dateFormatter.timeZone = NSTimeZone(name: "GMT")
+        dateFormatter.timeZone = TimeZone(identifier: "GMT")
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-        let newDate = dateFormatter.dateFromString(dateAsString)
+        let newDate = dateFormatter.date(from: dateAsString)
         return newDate!
     }
 
-    func loadStudentsAccessNotificationsArray(studentsArray: [Children]) -> Void {
+    func loadStudentsAccessNotificationsArray(_ studentsArray: [Children]) -> Void {
         print("total students \(studentsArray.count)")
         for student in studentsArray{
             let key = student.ID.stringValue
@@ -77,7 +99,7 @@ class ReaxiumHelper{
         
     }
     
-    func saveAccessNotification(notification: AccessNotification) -> Void {
+    func saveAccessNotification(_ notification: AccessNotification) -> Void {
         
         let key = notification.studentID!.stringValue
         
@@ -87,7 +109,7 @@ class ReaxiumHelper{
         
     }
     
-    func isAnEmergencyNotification(notification: Dictionary<String, AnyObject>) -> Bool {
+    func isAnEmergencyNotification(_ notification: Dictionary<String, AnyObject>) -> Bool {
         
         
         let typeRawValue = notification["traffic_type"]!["traffic_type_id"] as? NSNumber
@@ -99,11 +121,11 @@ class ReaxiumHelper{
         return false
     }
     
-    func getTimeStringFromDate(date:NSDate?) -> String{
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeZone = NSTimeZone(name: "America/New_York")
+    func getTimeStringFromDate(_ date:Date?) -> String{
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "America/New_York")
         dateFormatter.dateFormat = "h:mm a"
-        let stringDate = dateFormatter.stringFromDate(date!)
+        let stringDate = dateFormatter.string(from: date!)
         return stringDate
     }
  

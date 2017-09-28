@@ -14,24 +14,24 @@ import ObjectMapper
 
 class RoutesWebService: Service {
     
-    func callServiceObject(parameters: [String : AnyObject]?, withCompletionBlock: ((AnyObject?, error: NSError?) -> Void)) {
+    func callServiceObject(_ parameters: [String : AnyObject]?, withCompletionBlock: @escaping ((AnyObject?, _ error: NSError?) -> Void)) {
         
-        Alamofire.request(.POST, GlobalConstants.APIendpoint.routes, parameters: parameters, encoding: .JSON)
-            .responseObject { (response: Response<ReaxiumResponse, NSError>) in
+        Alamofire.request(GlobalConstants.APIendpoint.routes, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+            .responseObject { (response: DataResponse<ReaxiumResponse>) in
                 if response.result.error == nil{
                     debugPrint(response)
                     
                     let responseValue = response.result.value
                     if responseValue?.code == 0{
                         let loggedUser = responseValue
-                        withCompletionBlock(loggedUser,error: nil)
+                        withCompletionBlock(loggedUser, nil)
                     }else{
                         let errorDetails = Dictionary(dictionaryLiteral: (NSLocalizedDescriptionKey, responseValue!.message))
-                        let responseError = NSError(domain: "com.reaxium.ReaxiumForParents", code: responseValue!.code.integerValue, userInfo: errorDetails)
-                        withCompletionBlock(nil,error: responseError)
+                        let responseError = NSError(domain: "com.reaxium.ReaxiumForParents", code: responseValue?.code as! Int, userInfo: errorDetails)
+                        withCompletionBlock(nil, responseError)
                     }
                 }else{
-                    withCompletionBlock(nil,error: response.result.error)
+                    withCompletionBlock(nil, response.result.error as NSError?)
                 }
         }
     }

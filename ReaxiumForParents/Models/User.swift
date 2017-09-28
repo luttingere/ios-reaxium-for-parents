@@ -16,36 +16,40 @@ class User: ReaxiumResponse{
     var lastname: String!
     var imageUrl: String!
     var children:[Children]!
+    var businessInformation: BusinessInformation!
     
 
-    required init?(_ map: Map){
-        super.init(map)
+    required init?(map: Map){
+        super.init(map: map)
     }
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        ID = aDecoder.decodeObjectForKey("ID") as! NSNumber
-        name = aDecoder.decodeObjectForKey("name") as! String
-        lastname = aDecoder.decodeObjectForKey("lastname") as! String
-        imageUrl = aDecoder.decodeObjectForKey("imageUrl") as! String
-        children = aDecoder.decodeObjectForKey("children") as! [Children]
+        ID = aDecoder.decodeObject(forKey: "ID") as! NSNumber
+        name = aDecoder.decodeObject(forKey: "name") as! String
+        lastname = aDecoder.decodeObject(forKey: "lastname") as! String
+        imageUrl = aDecoder.decodeObject(forKey: "imageUrl") as! String
+        children = aDecoder.decodeObject(forKey: "children") as! [Children]
+        businessInformation = aDecoder.decodeObject(forKey: "businessInformation") as! BusinessInformation
     }
     
-    override func encodeWithCoder(aCoder: NSCoder) {
-        super.encodeWithCoder(aCoder)
-        aCoder.encodeObject(ID, forKey: "ID")
-        aCoder.encodeObject(name, forKey: "name")
-        aCoder.encodeObject(lastname, forKey: "lastname")
-        aCoder.encodeObject(imageUrl, forKey: "imageUrl")
-        aCoder.encodeObject(children, forKey: "children")
+    override func encode(with aCoder: NSCoder) {
+        super.encode(with: aCoder)
+        aCoder.encode(ID, forKey: "ID")
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(lastname, forKey: "lastname")
+        aCoder.encode(imageUrl, forKey: "imageUrl")
+        aCoder.encode(children, forKey: "children")
+        aCoder.encode(businessInformation, forKey: "businessInformation")
     }
     
     override func mapping(map: Map) {
-        super.mapping(map)
+        super.mapping(map: map)
         ID <- map["ReaxiumResponse.object.0.parent.user_id"]
         name <- map["ReaxiumResponse.object.0.parent.first_name"]
         lastname <- map["ReaxiumResponse.object.0.parent.first_last_name"]
         imageUrl <- map["ReaxiumResponse.object.0.parent.user_photo"]
         children <- map["ReaxiumResponse.object.0.parentRelationship"]
+        businessInformation <- map["ReaxiumResponse.object.0.business_information"]
     }
 }

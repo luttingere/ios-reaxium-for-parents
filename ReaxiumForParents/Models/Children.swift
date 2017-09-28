@@ -23,26 +23,26 @@ class Children: NSObject, NSCoding, Mappable{
     
     required init(coder aDecoder: NSCoder) {
         super.init()
-        ID = aDecoder.decodeObjectForKey("ID") as! NSNumber
-        name = aDecoder.decodeObjectForKey("name") as! String
-        lastname = aDecoder.decodeObjectForKey("lastname") as! String
-        imageUrl = aDecoder.decodeObjectForKey("imageUrl") as! String
-        documentID = aDecoder.decodeObjectForKey("documentID") as! String
-        schoolName = aDecoder.decodeObjectForKey("schoolName") as! String
-        image = aDecoder.decodeObjectForKey("image") as? UIImage
+        ID = aDecoder.decodeObject(forKey: "ID") as! NSNumber
+        name = aDecoder.decodeObject(forKey: "name") as! String
+        lastname = aDecoder.decodeObject(forKey: "lastname") as! String
+        imageUrl = aDecoder.decodeObject(forKey: "imageUrl") as! String
+        documentID = aDecoder.decodeObject(forKey: "documentID") as! String
+        schoolName = aDecoder.decodeObject(forKey: "schoolName") as! String
+        image = aDecoder.decodeObject(forKey: "image") as? UIImage
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(ID, forKey: "ID")
-        aCoder.encodeObject(name, forKey: "name")
-        aCoder.encodeObject(lastname, forKey: "lastname")
-        aCoder.encodeObject(imageUrl, forKey: "imageUrl")
-        aCoder.encodeObject(documentID, forKey: "documentID")
-        aCoder.encodeObject(schoolName, forKey: "schoolName")
-        aCoder.encodeObject(image, forKey: "image")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(ID, forKey: "ID")
+        aCoder.encode(name, forKey: "name")
+        aCoder.encode(lastname, forKey: "lastname")
+        aCoder.encode(imageUrl, forKey: "imageUrl")
+        aCoder.encode(documentID, forKey: "documentID")
+        aCoder.encode(schoolName, forKey: "schoolName")
+        aCoder.encode(image, forKey: "image")
     }
     
-    required init?(_ map: Map){
+    required init?(map: Map){
 
     }
     
@@ -56,8 +56,8 @@ class Children: NSObject, NSCoding, Mappable{
         
         if let path = imageUrl{
             if !path.isEmpty{
-                let url = NSURL(string: path)
-                if let dataPicture = NSData(contentsOfURL:url!){
+                let url = URL(string: path)
+                if let dataPicture = try? Data(contentsOf: url!){
                     if let picture = UIImage(data: dataPicture){
                         image = picture
                     }

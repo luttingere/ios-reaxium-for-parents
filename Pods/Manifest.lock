@@ -1,13 +1,13 @@
 PODS:
-  - Alamofire (3.4.0)
-  - AlamofireObjectMapper (3.0.0):
-    - Alamofire (~> 3.2)
-    - ObjectMapper (~> 1.0)
+  - Alamofire (4.4.0)
+  - AlamofireObjectMapper (4.0.0):
+    - Alamofire (~> 4.0)
+    - ObjectMapper (~> 2.0)
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
   - GoogleMaps (1.13.2)
-  - KSToastView (0.5.6)
+  - KSToastView (0.5.7)
   - MMDrawerController (0.5.7):
     - MMDrawerController/Core (= 0.5.7)
     - MMDrawerController/MMDrawerBarButtonItem (= 0.5.7)
@@ -20,27 +20,27 @@ PODS:
     - MMDrawerController/Core
   - MMDrawerController/Subclass (0.5.7):
     - MMDrawerController/Core
-  - ObjectMapper (1.3.0)
+  - ObjectMapper (2.1.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 3.4)
-  - AlamofireObjectMapper (~> 3.0)
+  - Alamofire (~> 4.0)
+  - AlamofireObjectMapper (~> 4.0)
   - Crashlytics
   - Fabric
-  - GoogleMaps
-  - KSToastView (= 0.5.6)
+  - GoogleMaps (= 1.13.2)
+  - KSToastView (= 0.5.7)
   - MMDrawerController (~> 0.5.7)
 
 SPEC CHECKSUMS:
-  Alamofire: c19a627cefd6a95f840401c49ab1f124e07f54ee
-  AlamofireObjectMapper: 2d16585d06177be0116d76de73497e77437798af
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
   GoogleMaps: b20a103ff307f58392e603cf142e59d7e30374c1
-  KSToastView: 6c6044f1e8d8a7bb5ba098886421062eabba0478
+  KSToastView: aeb0ca50b44e9568b6f95b2d1ec53a3f016b50fc
   MMDrawerController: 7a4cf8e25596bf2434e03ce50d22a8608ddee6a1
-  ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
+  ObjectMapper: e5e0f8aef8590fc2ddcde7f27eddb255863ee6e9
 
-PODFILE CHECKSUM: b95bae303348f85756c84eb5406eb60dbda3d6fd
+PODFILE CHECKSUM: e75f730d5d4d7af3b97147a50dd3060c463d4a4e
 
-COCOAPODS: 1.0.0
+COCOAPODS: 1.1.1

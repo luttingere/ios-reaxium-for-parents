@@ -13,17 +13,19 @@ import KSToastView
 class MenuViewController: UIViewController {
     
     @IBOutlet weak var menuTableView: UITableView!
+    @IBOutlet var parentNameLabel: UILabel!
     var homeOption: [String: String] = ["option": "HOME", "image": "home_icon"]
     var logoutOption: [String: String] = ["option": "LOG OUT", "image": "logout_icon"]
     var menuOptions = [Dictionary<String, String>]()
-    var navItemTitle:String!
+    var screenTitle:String!
     var logoutWebService = LogoutWebService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navItemTitle = "\(GlobalVariable.loggedUser.name) \(GlobalVariable.loggedUser.lastname)"
-        self.title = navItemTitle.uppercaseString
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        UIApplication.shared.statusBarStyle = .lightContent
+        screenTitle = "\(GlobalVariable.loggedUser.name!) \(GlobalVariable.loggedUser.lastname!)"
+        parentNameLabel.text = screenTitle.uppercased()
         menuOptions.append(homeOption)
         menuOptions.append(logoutOption)
         
@@ -35,11 +37,11 @@ class MenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.view.layoutSubviews()
-        let indexPath = NSIndexPath(forRow: 0, inSection: 0)
-        menuTableView.selectRowAtIndexPath(indexPath, animated: false, scrollPosition: .None)
+        let indexPath = IndexPath(row: 0, section: 0)
+        menuTableView.selectRow(at: indexPath, animated: false, scrollPosition: .none)
     }
     
     func logoutUser()-> Void{
@@ -51,18 +53,18 @@ class MenuViewController: UIViewController {
             ]
         ]
         
-        logoutWebService.callServiceObject(parameters, withCompletionBlock: { (result, error) in
+        logoutWebService.callServiceObject(parameters as [String : AnyObject], withCompletionBlock: { (result, error) in
             if error == nil {
                 ReaxiumHelper().removeSavedUserWithKey("loggedUser")
-                for oneEvent in UIApplication.sharedApplication().scheduledLocalNotifications! {
+                for oneEvent in UIApplication.shared.scheduledLocalNotifications! {
                     let notification = oneEvent as UILocalNotification
-                    UIApplication.sharedApplication().cancelLocalNotification(notification)
+                    UIApplication.shared.cancelLocalNotification(notification)
                 }
                 
                 let mainStoryboard: UIStoryboard = UIStoryboard(name: "Login", bundle: nil)
-                let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LoginViewController")
+                let centerViewController = mainStoryboard.instantiateViewController(withIdentifier: "LoginViewController")
                 let centerNav = UINavigationController(rootViewController: centerViewController)
-                self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+                self.mm_drawerController.setCenterView(centerNav, withCloseAnimation: true, completion: nil)
             }else{
                 KSToastView.ks_showToast(error?.localizedDescription, duration: 3.0)
             }
@@ -83,26 +85,26 @@ class MenuViewController: UIViewController {
 
 extension MenuViewController:UITableViewDelegate, UITableViewDataSource{
         
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return menuOptions.count
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! MenuTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MenuTableViewCell
         cell.setMenuCellContentWithData(menuOptions[indexPath.row])
         return cell
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == 0 {
-            if let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HomeViewController"){
+            if let centerViewController = self.storyboard?.instantiateViewController(withIdentifier: "HomeViewController"){
                 let centerNav = UINavigationController(rootViewController: centerViewController)
-                self.mm_drawerController.setCenterViewController(centerNav, withCloseAnimation: true, completion: nil)
+                self.mm_drawerController.setCenterView(centerNav, withCloseAnimation: true, completion: nil)
             }
         }else{
             logoutUser()
